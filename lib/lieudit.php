@@ -1,7 +1,5 @@
 <?php
 
-global $db;
-
 function creerlieudit($comm) {
   // pour éviter le lieu dit avec le nom dans la génération de village
   $ListeNom = array("Avygael", "Taklin");

@@ -1,7 +1,5 @@
 <?php
 
-global $db;
-
 function creerauberge(){
   // Nom Feminin singulier
   $CreFemCon = db_get_one_random_partial_value("CreFemCon");
