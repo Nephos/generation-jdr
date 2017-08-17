@@ -17,4 +17,12 @@ catch (PDOException $e) {
     exit(1);
 }
 
+function db_get_one_random_partial_value($class) {
+    global $db;
+    $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND() LIMIT 1;");
+    $query->execute(["class" => $class]);
+    $result = $query->fetch();
+    return $result['value'];
+}
+
 ?>

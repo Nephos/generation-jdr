@@ -2,27 +2,21 @@
 
 global $db;
 
-function db_get_one_random_partial_value($class) {
-    global $db;
-    $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND() LIMIT 1;");
-    $query->execute(["class" => $class]);
-    $result = $query->fetch();
-    return $result['value'];
-}
+function creerlieudit($comm) {
+  // pour éviter le lieu dit avec le nom dans la génération de village
+  $ListeNom = array("Avygael", "Taklin");
+  $lieudit='';
+  $Lieu='';
+  $Adj='';
+  $Qua='';
+  $Nom='';
 
-function creerlieudit($comm) { //pour éviter le lieu dit avec le nom dans la génération de village
-	$ListeNom = array("Avygael", "Taklin");
+  if ($comm == 0)
+    $trand = rand(1,100);
+  else
+    $trand = rand(1,95);
 
-	$lieudit='';
-
-    $Lieu='';
-    $Adj='';
-    $Qua='';
-    $Nom='';
-
-	if ($comm==0 ) $trand =rand(1,100);
-	else $trand =rand(1,95);
-	switch($trand){
+  switch($trand) {
     case $trand<25;
     $Lieu=db_get_one_random_partial_value('LieuMas');
     $Adj=db_get_one_random_partial_value('AdjMas');
@@ -46,10 +40,8 @@ function creerlieudit($comm) { //pour éviter le lieu dit avec le nom dans la gén
     case ($trand>=96);
     $lieudit.='Chez '.$ListeNom[rand(0,count($ListeNom)-1)];
     break;
-	}
-	return $lieudit;
+  }
+  return $lieudit;
 }
-
-
 
 ?>
