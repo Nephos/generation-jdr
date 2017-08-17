@@ -583,4 +583,17 @@ INSERT INTO sentence_partials (value, class) VALUES
 ("voisine", "dela"),
 ("petite personne", "dela")
 
+("Une fontaine", "lieu"),
+("Un parc", "lieu"),
+("Un lac", "lieu"),
+("Une statue", "lieu"),
+("Un édifice commémoratif", "lieu"),
+("Un pont", "lieu"),
+("Une tour abandonée", "lieu"),
+("Un jardin", "lieu"),
+("Un bosquet", "lieu"),
+("Une place", "lieu"),
+("Une maison biscornue", "lieu"),
+("Une maison étrange", "lieu"),
+
 ;
