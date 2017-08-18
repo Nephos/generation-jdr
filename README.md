@@ -5,7 +5,7 @@ Site de génération JDR
 
 Créer une base de donnée, par exemple:
 
-    echo "create database generation_jdr" | mysql --user root --host 127.0.0.1 -p 
+    echo "create database generation_jdr" | mysql --user root --host 127.0.0.1 -p
 
 Installer la base de données:
 
