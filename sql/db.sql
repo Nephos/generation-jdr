@@ -702,4 +702,28 @@ INSERT INTO sentence_partials (value, class) VALUES
 ("Larmes de roi", "gemmetype6"),
 ("Rubis", "gemmetype6")
 
+("Barbare", "typedeherosmas"),
+("Barde", "typedeherosmas"),
+("Druide", "typedeherosmas"),
+("Ensorceleur", "typedeherosmas"),
+("Guerrier", "typedeherosmas"),
+("Magicien", "typedeherosmas"),
+("Moine", "typedeherosmas"),
+("Paladin", "typedeherosmas"),
+("Prêtre", "typedeherosmas"),
+("Rôdeur", "typedeherosmas"),
+("Roublard", "typedeherosmas"),
+
+("Barbare", "typedeherosfem"),
+("Barde", "typedeherosfem"),
+("Druidesse", "typedeherosfem"),
+("Ensorceleuse", "typedeherosfem"),
+("Guerrière", "typedeherosfem"),
+("Magicienne", "typedeherosfem"),
+("Moine", "typedeherosfem"),
+("Paladine", "typedeherosfem"),
+("Prêtresse", "typedeherosfem"),
+("Rôdeuse", "typedeherosfem"),
+("Roublarde", "typedeherosfem")
+
 ;
