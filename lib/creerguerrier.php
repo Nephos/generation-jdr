@@ -11,29 +11,23 @@ function creerguerrier($tirage,$race){
 				"CA",
 				"archers",
 				"desctructeur",
-				"désarmeur",
+				"dÃ©sarmeur",
 				"2armescourte",
 				"2armeslongues",
 				"2mains",
-				"Monte"					
+				"Monte"
 			);
 	$pnj->setClassedeperso('guerrier');
 	$pnj->setSousclasse($type[rand(0,count($type)-1)]);
 	$pnj->setCarac(tiragedes($tirage));
 	$pnj->setRace(choixrace($race));
-	
-	
-	
+
 	echo test($pnj);
 	foreach ($pnj->getRace() as $value) {
 		echo $value	;
 	}
-	
-	
+
 	echo $pnj->afficherPNJ();
-	
-	
-	 
 }
 
 ?>
