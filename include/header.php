@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-Transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Génération de trésors, objets magiques, auberges, scénari,...</title>
-<meta name="description" content="Site permettant de générer des trésors, de générer des objes magiques relatif à Donjon et Dragon 3.5 et applicable à tout univers médiéval fantastique"/>
-<meta name="title" content="Génération de trésors, objets magiques, auberges, scénari,... "/>
+<title>GÃ©nÃ©ration de trÃ©sors, objets magiques, auberges, scÃ©nari,...</title>
+<meta name="description" content="Site permettant de gÃ©nÃ©rer des trÃ©sors, de gÃ©nÃ©rer des objes magiques relatif Ã  Donjon et Dragon 3.5 et applicable Ã  tout univers mÃ©diÃ©val fantastique"/>
+<meta name="title" content="GÃ©nÃ©ration de trÃ©sors, objets magiques, auberges, scÃ©nari,... "/>
 
 <meta http-equiv="Content-Language" content="English" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -32,8 +32,8 @@
 <div id="wrap">
 
 <div id="header">
-<h1>Générateur pour rôlistes</h1>
-<h2>En deux clics, générez beaucoup</h2>
+<h1>GÃ©nÃ©rateur pour rÃ´listes</h1>
+<h2>En deux clics, gÃ©nÃ©rez beaucoup</h2>
 </div>
 
 <div id="right">

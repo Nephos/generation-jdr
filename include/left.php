@@ -22,21 +22,21 @@ onMouseOver="document.img_3.src='images/mail.png';" onMouseOut="document.img_3.s
 <h3>Mondes Med-fan</h3>
 <ul>
 <li><a href="index.php?page=auberge">Auberges</a></li>
-<li><a href="index.php?page=aubergedetail">Auberges détailées</a></li>
+<li><a href="index.php?page=aubergedetail">Auberges dÃ©tailÃ©es</a></li>
 <li><a href="index.php?page=gemme">Gemmes</a></li>
-<!--<li><a href="index.php?page=encours">Lancer de dés <i>en cours</i></a></li> -->
+<!--<li><a href="index.php?page=encours">Lancer de dÃ©s <i>en cours</i></a></li> -->
 <li><a href="index.php?page=lieudit">Lieux-dits</a></li>
 <li><a href="index.php?page=nomevolue">Noms complets</a></li>
 <li><a href="index.php?page=objart">Objets d'arts</a></li>
 <li><a href="index.php?page=obm">Objets magiques</a></li>
 <li><a href="index.php?page=objnm">Objets non magiques</a></li>
 <li><a href="index.php?page=parchemin">Parchemins</a></li>
-<li><a href="index.php?page=piege">Pièges</a></li>
+<li><a href="index.php?page=piege">PiÃ¨ges</a></li>
 <li><a href="index.php?page=placeforte">Place forte</a></li>
 <li><a href="index.php?page=potion">Potions</a></li>
 <!-- <li><a href="index.php?page=encours">Rencontres <i>en cours</i></a></li> -->
-<li><a href="index.php?page=scenar">Scénari minute</a></li>
-<li><a href="index.php?page=tresor">Trésors complets</a></li>
+<li><a href="index.php?page=scenar">ScÃ©nari minute</a></li>
+<li><a href="index.php?page=tresor">TrÃ©sors complets</a></li>
 <li><a href="index.php?page=ville">Ville</a></li>
 </ul>
 
@@ -46,7 +46,7 @@ onMouseOver="document.img_3.src='images/mail.png';" onMouseOut="document.img_3.s
 </ul>
 <h3>Mondes Post-apo</h3>
 <ul>
-<li><a href="index.php?page=apocalypse">Apocalypse (béta)</a></li>
+<li><a href="index.php?page=apocalypse">Apocalypse (bÃ©ta)</a></li>
 </ul>
 
 
