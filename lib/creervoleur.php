@@ -2,5 +2,5 @@
 
 function creervoleur()
 {
-    echo 'création du voleur';
+    echo 'crĂŠation du voleur';
 }

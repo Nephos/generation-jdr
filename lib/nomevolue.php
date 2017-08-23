@@ -28,7 +28,7 @@ function creernomevo($race, $sexe)
 
     switch ($race) {
         case 1:
-        if (rand(0, 1)==1) { //nom de famille humain prénom elfe
+        if (rand(0, 1)==1) { //nom de famille humain prÃ©nom elfe
             include_once('lib/nomhum.php');
             if ($sexe==2) {
                 include_once('lib/prenomfemelfe.php');
@@ -144,7 +144,7 @@ function creernomsim($race, $sexe)
     $nom='';
     switch ($race) {
         case 1:
-        if (rand(0, 1)==1) { //nom de famille humain prénom elfe
+        if (rand(0, 1)==1) { //nom de famille humain prÃ©nom elfe
             if ($sexe==2) {
                 include_once('lib/prenomfemelfe.php');
                 include_once('lib/prenomfem.php');

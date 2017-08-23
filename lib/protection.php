@@ -6,24 +6,24 @@ function appelprotection($protection, $nomduvillage, $particu, $taille)
     include('chateau.php');
 
     $sortie='';
-    $geo=array('la rivière', 'le gouffre', 'la colline','le flanc de montage', 'le fossé','la forêt','le fleuve','le lac','le pic rocheux');
+    $geo=array('la riviÃ¨re', 'le gouffre', 'la colline','le flanc de montage', 'le fossÃ©','la forÃªt','le fleuve','le lac','le pic rocheux');
     $porte=rand(2, 3)+ceil($protection/2);
 
 
     $sortie.='.<br><br><h4>Protection</h4>';
     $sortie.=$nomduvillage;
     if ($protection<=13) {
-        $sortie.=', ne posséde aucune protection particulière sauf ses habitants et sa milice.';
+        $sortie.=', ne possÃ©de aucune protection particuliÃ¨re sauf ses habitants et sa milice.';
         $detailporte=detailport(1);
     } elseif ($protection<=18) {
-        $sortie.=', posséde un mur d\'enceinte fortifié';
+        $sortie.=', possÃ©de un mur d\'enceinte fortifiÃ©';
         $detailporte=detailport(2);
 
         if (rand(1, 100)>5) {
-            $sortie.=', de plus, '.$geo[rand(0, count($geo)-1)]. ' se trouvant à proximité donne une protection naturelle fort appréciable.';
+            $sortie.=', de plus, '.$geo[rand(0, count($geo)-1)]. ' se trouvant Ã  proximitÃ© donne une protection naturelle fort apprÃ©ciable.';
         }
     } else {
-        $sortie.=', en plus d\'un mur fortifié, posséde de puissants héros fréquement en ville et prêts à prendre les armes pour défendre des attaques extérieures';
+        $sortie.=', en plus d\'un mur fortifiÃ©, possÃ©de de puissants hÃ©ros frÃ©quement en ville et prÃªts Ã  prendre les armes pour dÃ©fendre des attaques extÃ©rieures';
         $detailporte=detailport(3);
     }
     $sortie.= '<br>Les '.$porte. ' portes de la ville '.$detailporte.'<br>';
@@ -32,9 +32,9 @@ function appelprotection($protection, $nomduvillage, $particu, $taille)
     $k=100;
     while (rand(1, 100)<$k && $particu==2) {
         if ($j==0) {
-            $sortie.='Etant une ville à prédisposition militaire, '.$nomduvillage.' dispose également ';
+            $sortie.='Etant une ville Ã  prÃ©disposition militaire, '.$nomduvillage.' dispose Ã©galement ';
             $sortie.=creerchateau($taille);
-            $sortie.='<br>Et on y retrouve également : <br>';
+            $sortie.='<br>Et on y retrouve Ã©galement : <br>';
         }
         $sortie.='-'.creeraddonmili().'.<br>';
         $j++;

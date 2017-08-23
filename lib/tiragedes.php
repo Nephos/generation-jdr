@@ -20,8 +20,8 @@ function tiragedes($methode)
                 }
                 arsort($tab); // tri des valeur des 4 des
                 array_pop($tab); //suppression du plus petit
-                $carac=0; //mise à zero de la carac
-                foreach ($tab as $val) { //addition des 3 dés
+                $carac=0; //mise Ã  zero de la carac
+                foreach ($tab as $val) { //addition des 3 dÃ©s
                     $carac += $val;
                 }
                 $id_caracs[$k]=$carac; //atrribution de l'addition dans le tableau de caract
@@ -45,8 +45,8 @@ function tiragedes($methode)
                 }
                 arsort($tab); // tri des valeur des 4 des
                 array_pop($tab); //suppression du plus petit
-                $carac=0; //mise à zero de la carac
-                foreach ($tab as $val) { //addition des 3 dés
+                $carac=0; //mise Ã  zero de la carac
+                foreach ($tab as $val) { //addition des 3 dÃ©s
                     $carac += $val;
                 }
                 $id_caracs[$k]=$carac; //atrribution de l'addition dans le tableau de caract

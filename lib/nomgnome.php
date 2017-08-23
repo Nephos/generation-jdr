@@ -3,7 +3,7 @@ function getnomgnome()
 {
     $table1=rand(1, 4);
     $table2= array("add","arum","baer","bar","callad","chik","dal","din","eaus","enn","erf","faer","fen","flan","gaer","gar","hed","herl","ien","jan","kaer","len","lun","mikk","neb","oaen","ow","pall","pin","raer","ras","seg","skor","tikk","uran","urd","van","var","wann","wed");
-    $table3=array("Acier","Appeleur","Argen","Bière","Blaireau","Boucle","Brille","Buveur","Cape","Cendre","Coeur","Colline","Eclair","Enjambeur","Errant","Fantôme","Faux-pas","Fer","Gemme","Honneur","Leste","Lune","Main","Oeil","Ombre","Or","Os","Paresse","Peau","Péllant","Petit","Pied","Pierre","Rapide","Renard","Rieur","Ruse","Sauvage","Soleil","Soupir","Terre");
+    $table3=array("Acier","Appeleur","Argen","BiÃ¨re","Blaireau","Boucle","Brille","Buveur","Cape","Cendre","Coeur","Colline","Eclair","Enjambeur","Errant","FantÃ´me","Faux-pas","Fer","Gemme","Honneur","Leste","Lune","Main","Oeil","Ombre","Or","Os","Paresse","Peau","PÃ©llant","Petit","Pied","Pierre","Rapide","Renard","Rieur","Ruse","Sauvage","Soleil","Soupir","Terre");
     $nom='';
     switch ($table1) {
         case 1:

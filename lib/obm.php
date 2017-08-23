@@ -323,7 +323,7 @@ function getWeapon($type, $xml)
         }
     } while ($property["mod"]==0);
     if ($property["mod"]<0) {
-        //Arme spécifique
+        //Arme spÃ©cifique
         $percent = rand(1, 100);
         $spec = $base->xpath("/objets/armes/spec/arme/".$type."[@min<='".$percent."' and @max>='".$percent."']/parent::*");
         $nom = $spec[0]->nom;
@@ -335,7 +335,7 @@ function getWeapon($type, $xml)
         echo "<hr />";/**/
         if ($base->nom == "Munitions") {
             $percent = rand(1, 100);
-            $base->nom = ($percent < 21 ? "Billes" : ($percent < 51 ? "Carreaux" : "Flèches")." (50)");
+            $base->nom = ($percent < 21 ? "Billes" : ($percent < 51 ? "Carreaux" : "FlÃ¨ches")." (50)");
         }
         $nom = $base->nom." ".$property["nom"];
         foreach ($properties as $value) {
@@ -392,7 +392,7 @@ function getArmor($type, $xml)
         }
     } while ($property["mod"]==0);
     if ($property["mod"]<0) {
-        //Armure spécifique
+        //Armure spÃ©cifique
         $percent = rand(1, 100);
         $spec = $base->xpath("/objets/armures/spec/".$base_type."/*/".$type."[@min<='".$percent."' and @max>='".$percent."']/parent::*");
         $nom = $spec[0]->nom;
@@ -488,9 +488,9 @@ function checkProperties()
             for ($i=1; $i<=100; $i++) {
                 $c = $xml->xpath("/objets/armes/prop/".$o."/property/".$t."[@min<='".$i."' and @max>='".$i."']/parent::*");
                 if (count($c)!=1) {
-                    $output .= $o." ".$t." N°".$i." contient ".count($c)." entrée(s)<br/>";
+                    $output .= $o." ".$t." NÂ°".$i." contient ".count($c)." entrÃ©e(s)<br/>";
                 }
-                echo($o." ".$t." N°".$i." : ".$c[0]->nom."<br />");
+                echo($o." ".$t." NÂ°".$i." : ".$c[0]->nom."<br />");
             }
         }
     }
@@ -502,7 +502,7 @@ function checkMagical()
     $output = "";
     $xml = simplexml_load_file('xml/obm.xml');
     $obm = array("anneaux", "baguettes", "potions");
-    $obm2 = array("bâtons", "sceptres");
+    $obm2 = array("bÃ¢tons", "sceptres");
     $types = array("faible", "intermediaire", "puissant");
     $types2 = array("intermediaire", "puissant");
 
@@ -511,9 +511,9 @@ function checkMagical()
             for ($i=1; $i<=100; $i++) {
                 $c = $xml->xpath("/objets/".$o."/*/".$t."[@min<='".$i."' and @max>='".$i."']/parent::*");
                 if (count($c)!=1) {
-                    $output .= $o." ".$t." N°".$i." contient ".count($c)." entrée(s)<br/>";
+                    $output .= $o." ".$t." NÂ°".$i." contient ".count($c)." entrÃ©e(s)<br/>";
                 }
-                echo($o." ".$t." N°".$i." : ".$c[0]->nom."<br />");
+                echo($o." ".$t." NÂ°".$i." : ".$c[0]->nom."<br />");
             }
         }
     }
@@ -522,9 +522,9 @@ function checkMagical()
             for ($i=1; $i<=100; $i++) {
                 $c = $xml->xpath("/objets/".$o."/*/".$t."[@min<='".$i."' and @max>='".$i."']/parent::*");
                 if (count($c)!=1) {
-                    $output .= $o." ".$t." N°".$i." contient ".count($c)." entrée(s)<br/>";
+                    $output .= $o." ".$t." NÂ°".$i." contient ".count($c)." entrÃ©e(s)<br/>";
                 }
-                echo($o." ".$t." N°".$i." : ".$c[0]->nom."<br />");
+                echo($o." ".$t." NÂ°".$i." : ".$c[0]->nom."<br />");
             }
         }
     }

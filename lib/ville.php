@@ -37,7 +37,7 @@ function nbrhab($typevillenum, $nbrhabitant)
 {
     $nbrhabitantparrace=array(0,0,0,0,0,0,0,0);
 
-    if ($typevillenum==0) { //isolée
+    if ($typevillenum==0) { //isolÃ©e
         $nbrhabitantparrace[0]=round($nbrhabitant/100*96);
         $nbrhabitantparrace[1]=round($nbrhabitant/100*2);
         $nbrhabitantparrace[2]=round($nbrhabitant/100*1);
@@ -51,7 +51,7 @@ function nbrhab($typevillenum, $nbrhabitant)
         $nbrhabitantparrace[5]=round($nbrhabitant/100*1);
         $nbrhabitantparrace[6]=round($nbrhabitant/100*1);
         $nbrhabitantparrace[7]=round($nbrhabitant/100*1);
-    } else { //intégrée
+    } else { //intÃ©grÃ©e
         $nbrhabitantparrace[0]=round($nbrhabitant/100*36);
         $nbrhabitantparrace[1]=round($nbrhabitant/100*20);
         $nbrhabitantparrace[2]=round($nbrhabitant/100*18);

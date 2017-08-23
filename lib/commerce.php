@@ -79,7 +79,7 @@ function creercommerce($type, $particu, $typevillenum, $taille)
         case 1:
         if (rand(1, 100) > 50) {
             $nom = creerauberge();
-            $sortie = 'Une auberge portant le nom : ' . $nom . '<a href="index.php?page=aubergedetail&nom=' . urlencode($nom) . '" target="_blank"><i> Détail</i></a>';
+            $sortie = 'Une auberge portant le nom : ' . $nom . '<a href="index.php?page=aubergedetail&nom=' . urlencode($nom) . '" target="_blank"><i> DÃ©tail</i></a>';
             ;
             compteur('auberge');
         } else {

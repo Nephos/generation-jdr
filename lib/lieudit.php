@@ -2,7 +2,7 @@
 
 function creerlieudit($comm)
 {
-    // pour éviter le lieu dit avec le nom dans la génération de village
+    // pour Ã©viter le lieu dit avec le nom dans la gÃ©nÃ©ration de village
     $ListeNom = array("Avygael", "Taklin");
     $lieudit='';
     $Lieu='';

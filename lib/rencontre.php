@@ -202,7 +202,7 @@ function fpdecreature($nbrcrea, $fp)
 }
 function choixcreat($envi, $fpcrea)
 {
-    $tabenvi = array("en milieu aquatique","dans les plaines","dans le désert","dans une colline","dans un marécage","dans une forêt","dans une montagne","dans un souterrain");
+    $tabenvi = array("en milieu aquatique","dans les plaines","dans le dÃ©sert","dans une colline","dans un marÃ©cage","dans une forÃªt","dans une montagne","dans un souterrain");
     $crea ='';
     switch ($envi) {
         case 0: //aquatique
@@ -211,13 +211,13 @@ function choixcreat($envi, $fpcrea)
         case 1: //plaine
             $crea=appelcreaplai($fpcrea);
         break;
-        case 2: //désert
+        case 2: //dÃ©sert
             $crea=appelcreadese($fpcrea);
         break;
         case 3: // colline
             $crea=appelcreacoll($fpcrea);
         break;
-        case 4: //marécage
+        case 4: //marÃ©cage
             $crea=appelcreamare($fpcrea);
         break;
         case 5: //foret

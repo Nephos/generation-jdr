@@ -3,25 +3,25 @@
 function detailport($i)
 {
     $detailportefaible=array(
-        "sont souvent laissées sans protection.",
+        "sont souvent laissÃ©es sans protection.",
         "ne tiennent plus que part un gond",
-        "tomberaient si un enfant venait à s'appuyer dessus",
+        "tomberaient si un enfant venait Ã  s'appuyer dessus",
         "ne tiennent que par habitude",
-        "ne sont jamais gardées",
+        "ne sont jamais gardÃ©es",
         "laissent passer le vent tout autant que les malfrats",
-        "devaient être belles"
+        "devaient Ãªtre belles"
     );
     $detailportemoyen=array(
-        "ne sont jamais laissées sans protection.",
-        "ne sont jamais laissée sans protection et la milice tourne jour et nuit.",
-        "sont fait de bois solide et de renfort métalique.",
-        "sont renforcées et offrent une bonne protection"
+        "ne sont jamais laissÃ©es sans protection.",
+        "ne sont jamais laissÃ©e sans protection et la milice tourne jour et nuit.",
+        "sont fait de bois solide et de renfort mÃ©talique.",
+        "sont renforcÃ©es et offrent une bonne protection"
     );
     $detailportehaut=array(
-        "peuvent être fermées rapidement avec une herse et une porte de bois massive renforcée de métal",
-        "sont en bois solide et possédent des meurtrieres",
+        "peuvent Ãªtre fermÃ©es rapidement avec une herse et une porte de bois massive renforcÃ©e de mÃ©tal",
+        "sont en bois solide et possÃ©dent des meurtrieres",
         "se ferme magiquement sous un simple mot de commande",
-        "on déjà résisté à bon nombre d'essai d'intrusion et encore personne ne les a franchit de force."
+        "on dÃ©jÃ  rÃ©sistÃ© Ã  bon nombre d'essai d'intrusion et encore personne ne les a franchit de force."
     );
 
     if ($i==1) {

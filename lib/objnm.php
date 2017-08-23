@@ -8,27 +8,27 @@ function getNonMagical()
             case ($percent<18):
                 $percent = rand(1, 100);
                 switch ($percent) {
-                    case ($percent<13): $count=rand(1, 4); $items[]=array("Feu grégois (".$count." flasque(s))", $count*20); break;
+                    case ($percent<13): $count=rand(1, 4); $items[]=array("Feu grÃ©gois (".$count." flasque(s))", $count*20); break;
                     case ($percent<25): $count=rand(2, 8); $items[]=array("Acide (".$count." flasque(s))", $count*10); break;
-                    case ($percent<37): $count=rand(1, 4); $items[]=array("Bâtonnet(s) fumigène(s) (".$count.")", $count*20); break;
-                    case ($percent<49): $count=rand(1, 4); $items[]=array("Eau bénite (".$count." flasque(s))", $count*25); break;
+                    case ($percent<37): $count=rand(1, 4); $items[]=array("BÃ¢tonnet(s) fumigÃ¨ne(s) (".$count.")", $count*20); break;
+                    case ($percent<49): $count=rand(1, 4); $items[]=array("Eau bÃ©nite (".$count." flasque(s))", $count*25); break;
                     case ($percent<63): $count=rand(1, 4); $items[]=array("Antidote (".$count." dose(s))", $count*50); break;
-                    case ($percent<75): $items[]=array("Torche éternelle", 110); break;
+                    case ($percent<75): $items[]=array("Torche Ã©ternelle", 110); break;
                     case ($percent<89): $count=rand(1, 4); $items[]=array("Sacoche(s) immobilisante(s) (".$count.")", $count*50); break;
-                    default: $count=rand(1, 4); $items[]=array("Pierre(s) à tonnerre (".$count.")", $count*30); break;
+                    default: $count=rand(1, 4); $items[]=array("Pierre(s) Ã  tonnerre (".$count.")", $count*30); break;
                 }break;
             case ($percent<51):
                 $percent = rand(1, 100);
                 $taille = " de taille ".(rand(1, 100)<11 ? "P" : "M");
                 switch ($percent) {
                     case ($percent<13): $items[]=array("Chemise de maille".$taille, 100); break;
-                    case ($percent<19): $items[]=array("Armure de cuir cloutée de maître".$taille, 175); break;
+                    case ($percent<19): $items[]=array("Armure de cuir cloutÃ©e de maÃ®tre".$taille, 175); break;
                     case ($percent<27): $items[]=array("Cuirasse".$taille, 200); break;
                     case ($percent<35): $items[]=array("Crevice".$taille, 250); break;
-                    case ($percent<55): $items[]=array("Armure à plaques".$taille, 600); break;
+                    case ($percent<55): $items[]=array("Armure Ã  plaques".$taille, 600); break;
                     case ($percent<81): $items[]=array("Harnois".$taille, 1500); break;
                     case ($percent<91):
-                        $taille = " en ébénite".$taille;
+                        $taille = " en Ã©bÃ©nite".$taille;
                         if (rand(1, 100)<51) {
                             $items[]=array("Rondache".$taille, 203);
                         } else {
@@ -37,7 +37,7 @@ function getNonMagical()
                         break;
                     default:
                         $percent = rand(1, 100);
-                        $taille = " de maître".$taille;
+                        $taille = " de maÃ®tre".$taille;
                         switch ($percent) {
                             case ($percent<18): $items[]=array("Targe".$taille, 165); break;
                             case ($percent<41): $items[]=array("Rondache en bois".$taille, 153); break;
@@ -46,29 +46,29 @@ function getNonMagical()
                             default: $items[]=array("Ecu en acier".$taille, 170);
                         }
                 }break;
-            case ($percent<84): $item = getBaseWeapon(rand(1, 3)); $item[0].=" de maître"; $items[]=$item; break; //Armes
+            case ($percent<84): $item = getBaseWeapon(rand(1, 3)); $item[0].=" de maÃ®tre"; $items[]=$item; break; //Armes
             default:    $percent=rand(1, 100);
                         switch ($percent) {
-                            case ($percent<4): $items[]=array("Sac à dos vide", 2); break;
+                            case ($percent<4): $items[]=array("Sac Ã  dos vide", 2); break;
                             case ($percent<7): $items[]=array("Pied-de-biche", 2); break;
                             case ($percent<12): $items[]=array("Lanterne sourde", 12); break;
                             case ($percent<17): $items[]=array("Cadenas simple", 20); break;
                             case ($percent<22): $items[]=array("Cadenas moyen", 40); break;
                             case ($percent<29): $items[]=array("Bon cadenas", 80); break;
                             case ($percent<36): $items[]=array("Excellent cadenas", 150); break;
-                            case ($percent<41): $items[]=array("Menottes de qualité suppérieure", 50); break;
+                            case ($percent<41): $items[]=array("Menottes de qualitÃ© suppÃ©rieure", 50); break;
                             case ($percent<44): $items[]=array("Petit miroir en acier", 10); break;
                             case ($percent<47): $items[]=array("Corde en soie (15m)", 10); break;
                             case ($percent<54): $items[]=array("Longue-vue", 1000); break;
-                            case ($percent<59): $items[]=array("Outils de maître artisan", 55); break;
-                            case ($percent<64): $items[]=array("Matériel d'escalade", 80); break;
-                            case ($percent<69): $items[]=array("Trousse de déguisement", 50); break;
+                            case ($percent<59): $items[]=array("Outils de maÃ®tre artisan", 55); break;
+                            case ($percent<64): $items[]=array("MatÃ©riel d'escalade", 80); break;
+                            case ($percent<69): $items[]=array("Trousse de dÃ©guisement", 50); break;
                             case ($percent<74): $items[]=array("Trousse de premiers secours", 50); break;
-                            case ($percent<78): $items[]=array("Symbôle sacré en argent", 25); break;
+                            case ($percent<78): $items[]=array("SymbÃ´le sacrÃ© en argent", 25); break;
                             case ($percent<82): $items[]=array("Sablier", 25); break;
                             case ($percent<89): $items[]=array("Loupe", 100); break;
-                            case ($percent<96): $items[]=array("Instrument de musique de maître", 100); break;
-                            default: $items[]=array("Outils de cambrioleur de qualité supérieure", 50);
+                            case ($percent<96): $items[]=array("Instrument de musique de maÃ®tre", 100); break;
+                            default: $items[]=array("Outils de cambrioleur de qualitÃ© supÃ©rieure", 50);
                          }
         }
 
@@ -82,26 +82,26 @@ function getBaseWeapon($type)
     $percent = rand(1, 100);
     switch ($type) {
         case 1: switch ($percent) {
-                    case ($percent<4): $item=array("Bâton", 600); break;
+                    case ($percent<4): $item=array("BÃ¢ton", 600); break;
                     case ($percent<9): $item=array("Cimeterre", 315); break;
                     case ($percent<13): $item=array("Dague", 302); break;
-                    case ($percent<23): $item=array("Epée à deux mains", 350); break;
-                    case ($percent<33): $item=array("Epée bâtarde", 335); break;
-                    case ($percent<38): $item=array("Epée courte", 310); break;
-                    case ($percent<51): $item=array("Epée longue", 315); break;
+                    case ($percent<23): $item=array("EpÃ©e Ã  deux mains", 350); break;
+                    case ($percent<33): $item=array("EpÃ©e bÃ¢tarde", 335); break;
+                    case ($percent<38): $item=array("EpÃ©e courte", 310); break;
+                    case ($percent<51): $item=array("EpÃ©e longue", 315); break;
                     case ($percent<61): $item=array("Grande hache", 320); break;
                     case ($percent<72): $item=array("Hache de guerre naine", 330); break;
                     case ($percent<76): $item=array("Kama", 302); break;
                     case ($percent<80): $item=array("Lance", 302); break;
-                    case ($percent<84): $item=array("Masse d'armes légère", 305); break;
+                    case ($percent<84): $item=array("Masse d'armes lÃ©gÃ¨re", 305); break;
                     case ($percent<89): $item=array("Masse d'armes lourde", 312); break;
                     case ($percent<93): $item=array("Nunchaku", 302); break;
-                    case ($percent<97): $item=array("Rapière", 320); break;
+                    case ($percent<97): $item=array("RapiÃ¨re", 320); break;
                     default: $item=array("Siangham", 303);
                  }break;
         case 2: switch ($percent) {
-                    case ($percent<11): $item=array("Arbalète légère", 335); break;
-                    case ($percent<21): $item=array("Arbalète lourde", 350); break;
+                    case ($percent<11): $item=array("ArbalÃ¨te lÃ©gÃ¨re", 335); break;
+                    case ($percent<21): $item=array("ArbalÃ¨te lourde", 350); break;
                     case ($percent<26): $item=array("Arc court", 330); break;
                     case ($percent<31): $item=array("Arc court composite (for +0)", 375); break;
                     case ($percent<36): $item=array("Arc court composite (for +1)", 450); break;
@@ -120,29 +120,29 @@ function getBaseWeapon($type)
                                 switch ($percent) {
                                     case($percent<21): $item=array("Billes (50)", 350); break;
                                     case($percent<51): $item=array("Carreaux (50)", 350); break;
-                                    default: $item=array("Flèches (50)", 350);
+                                    default: $item=array("FlÃ¨ches (50)", 350);
                                 }
                  }break;
         default: switch ($percent) {
-                    case ($percent<3): $item=array("Arbalète légère à répétition", 550); break;
-                    case ($percent<5): $item=array("Arbalète lourde à répétition", 700); break;
-                    case ($percent<8): $item=array("Arbalète de poing", 400); break;
+                    case ($percent<3): $item=array("ArbalÃ¨te lÃ©gÃ¨re Ã  rÃ©pÃ©tition", 550); break;
+                    case ($percent<5): $item=array("ArbalÃ¨te lourde Ã  rÃ©pÃ©tition", 700); break;
+                    case ($percent<8): $item=array("ArbalÃ¨te de poing", 400); break;
                     case ($percent<10): $item=array("Bolas", 305); break;
-                    case ($percent<13): $item=array("Chaîne cloutée", 325); break;
-                    case ($percent<15): $item=array("Cimeterre à deux mains", 375); break;
-                    case ($percent<17): $item=array("Corsèque", 310); break;
+                    case ($percent<13): $item=array("ChaÃ®ne cloutÃ©e", 325); break;
+                    case ($percent<15): $item=array("Cimeterre Ã  deux mains", 375); break;
+                    case ($percent<17): $item=array("CorsÃ¨que", 310); break;
                     case ($percent<19): $item=array("Coutille", 308); break;
                     case ($percent<21): $item=array("Dague coup-de-poing", 302); break;
                     case ($percent<24): $item=array("Double-lame", 700); break;
                     case ($percent<27): $item=array("Epieu", 301); break;
                     case ($percent<29): $item=array("Faux", 318); break;
                     case ($percent<31): $item=array("Filet", 320); break;
-                    case ($percent<33): $item=array("Fléau d'armes léger", 308); break;
-                    case ($percent<37): $item=array("Fléau d'armes lourd", 315); break;
-                    case ($percent<40): $item=array("Fléau double", 690); break;
+                    case ($percent<33): $item=array("FlÃ©au d'armes lÃ©ger", 308); break;
+                    case ($percent<37): $item=array("FlÃ©au d'armes lourd", 315); break;
+                    case ($percent<40): $item=array("FlÃ©au double", 690); break;
                     case ($percent<42): $item=array("Fouet", 301); break;
                     case ($percent<44): $item=array("Gantelet", 302); break;
-                    case ($percent<46): $item=array("Gantelet clouté", 305); break;
+                    case ($percent<46): $item=array("Gantelet cloutÃ©", 305); break;
                     case ($percent<48): $item=array("Gourdin", 300); break;
                     case ($percent<50): $item=array("Guisarme", 309); break;
                     case ($percent<54): $item=array("Hache d'armes", 310); break;
@@ -150,14 +150,14 @@ function getBaseWeapon($type)
                     case ($percent<59): $item=array("Hachette", 306); break;
                     case ($percent<62): $item=array("Hallebarde", 310); break;
                     case ($percent<65): $item=array("Kukri", 308); break;
-                    case ($percent<68): $item=array("Lance d'arçon", 310); break;
+                    case ($percent<68): $item=array("Lance d'arÃ§on", 310); break;
                     case ($percent<71): $item=array("Marteau de guerre", 312); break;
-                    case ($percent<73): $item=array("Marteau léger", 301); break;
+                    case ($percent<73): $item=array("Marteau lÃ©ger", 301); break;
                     case ($percent<76): $item=array("Marteau-piolet gnome", 620); break;
                     case ($percent<78): $item=array("Massue", 305); break;
                     case ($percent<80): $item=array("Matraque", 301); break;
                     case ($percent<83): $item=array("Morgenstern", 308); break;
-                    case ($percent<85): $item=array("Pic de guerre léger", 304); break;
+                    case ($percent<85): $item=array("Pic de guerre lÃ©ger", 304); break;
                     case ($percent<87): $item=array("Pic de guerre lourd", 308); break;
                     case ($percent<90): $item=array("Pique", 305); break;
                     case ($percent<92): $item=array("Sai", 301); break;

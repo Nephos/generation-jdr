@@ -6,7 +6,7 @@ function choixsoustype($classe, $pnj)
                 "CA",
                 "archers",
                 "desctructeur",
-                "désarmeur",
+                "dÃ©sarmeur",
                 "2armescourte",
                 "2armeslongues",
                 "2mains",

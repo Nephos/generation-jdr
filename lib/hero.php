@@ -36,8 +36,8 @@ function creerhero($typevillenum)
     $sexe=rand(1, 2);
     $listeutile= array();
 
-    $typedeherosmas=array("Barbare","Barde","Druide","Ensorceleur","Guerrier","Magicien","Moine","Paladin","Prêtre","Rôdeur","Roublard");
-    $typedeherosfem=array("Barbare","Barde","Druidesse","Ensorceleuse","Guerrière","Magicienne","Moine","Paladine","Prêtresse","Rôdeuse","Roublarde");
+    $typedeherosmas=array("Barbare","Barde","Druide","Ensorceleur","Guerrier","Magicien","Moine","Paladin","PrÃªtre","RÃ´deur","Roublard");
+    $typedeherosfem=array("Barbare","Barde","Druidesse","Ensorceleuse","GuerriÃ¨re","Magicienne","Moine","Paladine","PrÃªtresse","RÃ´deuse","Roublarde");
 
     if ($sexe=1) {
         $listeutile=$typedeherosmas;

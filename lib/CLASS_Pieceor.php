@@ -34,16 +34,16 @@ class CLASS_Pieceor
     {
         $tresor='';
         if ($this->pc!=0) {
-            $tresor.= $this->pc.' pièces de cuivre.<br />';
+            $tresor.= $this->pc.' piÃ¨ces de cuivre.<br />';
         }
         if ($this->pa!=0) {
-            $tresor.= $this->pa.' pièces d\'argent.<br />';
+            $tresor.= $this->pa.' piÃ¨ces d\'argent.<br />';
         }
         if ($this->po!=0) {
-            $tresor.= $this->po.' pièces d\'or.<br />';
+            $tresor.= $this->po.' piÃ¨ces d\'or.<br />';
         }
         if ($this->pp!=0) {
-            $tresor.= $this->pp.' pièces de platine.<br />';
+            $tresor.= $this->pp.' piÃ¨ces de platine.<br />';
         }
 
         return $tresor;

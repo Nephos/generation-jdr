@@ -9,7 +9,7 @@ function appelnoble($nbrnobles, $nbrexpert, $nbradepte, $nbrbat, $nbrguilde, $nb
     include_once('lieu.php');
 
     $sortie='';
-    $sortie.='<br><br><h4>Détails des nobles, professionnels, religieux ou assimilés, aventuriers et héros</h4>';
+    $sortie.='<br><br><h4>DÃ©tails des nobles, professionnels, religieux ou assimilÃ©s, aventuriers et hÃ©ros</h4>';
     if ($nbrnobles>0) {
         $sortie.='<span class="bouton" id="bouton_texte0" onclick="javascript:afficher_cacher(\'texte0\',\'le(s) noble(s)\');"></span>
 	<div id="texte0" class="texte">';
@@ -59,7 +59,7 @@ function appelnoble($nbrnobles, $nbrexpert, $nbradepte, $nbrbat, $nbrguilde, $nb
         $sortie.=' </div>';
     }
     if ($nbrheros>0) {
-        $sortie.='<br> <span class="bouton" id="bouton_texte6" onclick="javascript:afficher_cacher(\'texte6\',\'le(s) héro(s)\');"></span>
+        $sortie.='<br> <span class="bouton" id="bouton_texte6" onclick="javascript:afficher_cacher(\'texte6\',\'le(s) hÃ©ro(s)\');"></span>
 	<div id="texte6" class="texte">';
         for ($i=0;$i<$nbrheros;$i++) {
             $sortie.='- '.creerhero($typevillenum).'<br>';
@@ -83,7 +83,7 @@ function appelnoble($nbrnobles, $nbrexpert, $nbradepte, $nbrbat, $nbrguilde, $nb
 			afficher_cacher(\'texte3\',\'le(s) commerce(s)\');
 			afficher_cacher(\'texte4\',\'le(s) guilde(s)\');
 			afficher_cacher(\'texte5\',\'le(s) aventurier(s)\');
-			afficher_cacher(\'texte6\',\'le(s) héro(s)\');
+			afficher_cacher(\'texte6\',\'le(s) hÃ©ro(s)\');
 			afficher_cacher(\'texte7\',\'le(s) lieu(x)\');
     </script>';
     return $sortie;
