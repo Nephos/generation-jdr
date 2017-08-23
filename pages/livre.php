@@ -1,5 +1,5 @@
 <?php
-$output=''; 
+$output='';
 $output.='<h2>Ressources utilisées pour génération-jdr</h2>';
 $output.='<b>Guide du maitre</b><br/>';
 $output.="Objet magique : 100 %<br/>";
@@ -52,4 +52,3 @@ $output.="<br/>";
 
 
 echo $output;
-?>

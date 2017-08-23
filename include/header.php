@@ -7,7 +7,7 @@
 <meta name="title" content="Génération de trésors, objets magiques, auberges, scénari,... "/>
 
 <meta http-equiv="Content-Language" content="English" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="google-site-verification" content="Kp0IJqiQ9wNq_Q3WUEiyoIxT4YmwA-wCm8Fe712f_qA" />
 <link rel="stylesheet" type="text/css" href="design/style.css" media="screen" />
 <link rel="icon" type="image/png" href="/images/coffre.png" />

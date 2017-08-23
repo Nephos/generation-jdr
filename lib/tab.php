@@ -1,9 +1,10 @@
 <?php
 
-function appeltableau() {
-$output ='';
-	$output.='<h2>Taille du village</h2>';
-	$output.='<form method="post" onsubmit="return valid();"action="index.php?page=ville">
+function appeltableau()
+{
+    $output ='';
+    $output.='<h2>Taille du village</h2>';
+    $output.='<form method="post" onsubmit="return valid();"action="index.php?page=ville">
 		<table>
 			<tr>
 				<td><label for="fp1">Taille du village</label></td>
@@ -57,11 +58,10 @@ $output ='';
 					<OPTION VALUE="6">Nain</OPTION>
 				</SELECT></td>
 			</tr>-->
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>		
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
 		</table>
 		<br>Les valeurs selectionées ne sont qu\'indicatives et peuvent être modifiées par la génération.
 		<br>Attention les grandes villes, cités et métropoles peuvent prendre dix à douze secondes pour être chargées...';
-		
-		return $output;
-		}
-?>
+
+    return $output;
+}

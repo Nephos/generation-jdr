@@ -11,7 +11,5 @@ Dungeons &amp Dragons est publié en France sous license par ASMODEE &reg<br>
 Donjons &amp Dragons, d20 system et tous les noms s\'y rapportant sont des marques déposées de Wizards of the Coast&#153.</p>';
 
  $output.='</div></div></body></html>';
- 
- echo $output;
 
-?>
+ echo $output;

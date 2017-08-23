@@ -1,7 +1,7 @@
 <?php
 
-include ('lib/compteur.php');
-$output=''; 
+include('lib/compteur.php');
+$output='';
 $output.='<h2>Jusqu\'à présent ont été générés sur le site :</h2>';
 
 $output.='Auberges : '.compter('auberge').' <br />';
@@ -22,10 +22,4 @@ $output.='<br />';
 
 $output.='Noms Modernes: '.compter('nomsmodernes').' <br />';
 
-
-
-
-
-
 echo $output;
-?>

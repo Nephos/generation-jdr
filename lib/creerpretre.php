@@ -1,7 +1,6 @@
 <?php
 
-function creerpretre(){
-	echo 'création du Prêtre';
+function creerpretre()
+{
+    echo 'création du Prêtre';
 }
-
-?>

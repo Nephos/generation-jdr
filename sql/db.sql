@@ -700,7 +700,7 @@ INSERT INTO sentence_partials (value, class) VALUES
 ("Emeraude du vert le plus clair", "gemmetype6"),
 ("Hyacinthe", "gemmetype6"),
 ("Larmes de roi", "gemmetype6"),
-("Rubis", "gemmetype6")
+("Rubis", "gemmetype6"),
 
 ("Barbare", "typedeherosmas"),
 ("Barde", "typedeherosmas"),
@@ -724,7 +724,7 @@ INSERT INTO sentence_partials (value, class) VALUES
 ("Paladine", "typedeherosfem"),
 ("Prêtresse", "typedeherosfem"),
 ("Rôdeuse", "typedeherosfem"),
-("Roublarde", "typedeherosfem")
+("Roublarde", "typedeherosfem"),
 
 ("Un acrobate", "hommedupeuple"),
 ("Un jongleur", "hommedupeuple"),
@@ -737,11 +737,11 @@ INSERT INTO sentence_partials (value, class) VALUES
 ("Un horloger", "hommedupeuple"),
 ("Un crieur public", "hommedupeuple"),
 
-("Un soigneur", "adepte")n
-("Un alchimiste", "adepte")n
-("Un herboriste", "adepte")n
-("Un apothicaire", "adepte")n
-("Un scribe", "adepte")n
+("Un soigneur", "adepte"),
+("Un alchimiste", "adepte"),
+("Un herboriste", "adepte"),
+("Un apothicaire", "adepte"),
+("Un scribe", "adepte"),
 
 ("Un tisserand", "expert"),
 ("Un palefrenier", "expert"),
@@ -829,7 +829,6 @@ INSERT INTO sentence_partials (value, class) VALUES
 ("Seconde Vicomtesse", "titrenoblessefemfull"),
 ("Seconde Baronne", "titrenoblessefemfull"),
 ("Seconde Dame", "titrenoblessefemfull"),
-
 
 ("Empereur", "titrenoblessemasfull"),
 ("Roi", "titrenoblessemasfull"),
@@ -937,6 +936,58 @@ INSERT INTO sentence_partials (value, class) VALUES
 ("Second Seigneur", "titrenoblessemasfaible"),
 ("Second Dauphin", "titrenoblessemasfaible"),
 ("Second Banneret", "titrenoblessemasfaible"),
-("Second Baronnet" "titrenoblessemasfaible"),
+("Second Baronnet", "titrenoblessemasfaible"),
+
+("un maire", "typedirigeanttradisolo"),
+("un noble", "typedirigeanttradisolo"),
+("un aventurier à la retraite", "typedirigeanttradisolo"),
+("un riche marchand", "typedirigeanttradisolo"),
+("un prêtre de faible puissance", "typedirigeanttradisolo"),
+("un mage de faible puissance", "typedirigeanttradisolo"),
+("un troubadour", "typedirigeanttradisolo"),
+("un membre des ménestrels", "typedirigeanttradisolo"),
+("un officier", "typedirigeanttradisolo"),
+("un commandant", "typedirigeanttradisolo"),
+("un sénéchal", "typedirigeanttradisolo"),
+("un baron", "typedirigeanttradisolo"),
+("un compte", "typedirigeanttradisolo"),
+("un grand-duc", "typedirigeanttradisolo"),
+("un marquis", "typedirigeanttradisolo"),
+("un duc", "typedirigeanttradisolo"),
+
+("un conseil municipal", "typedirigeanttradimulti"),
+("un ensemble de marchands", "typedirigeanttradimulti"),
+("un ensemble de prêtres de différents cultes de la nature", "typedirigeanttradimulti"),
+("un groupe d'aventuriers à la retraite", "typedirigeanttradimulti"),
+("un ensemble de prêtres de confession bienveillante", "typedirigeanttradimulti"),
+
+("une guilde de voleurs", "typedirigeantinhabsolo"),
+("une guilde de marchands", "typedirigeantinhabsolo"),
+("une guilde d'artisans", "typedirigeantinhabsolo"),
+("une guilde d'assassins", "typedirigeantinhabsolo"),
+("une guilde de mercenaires", "typedirigeantinhabsolo"),
+
+("une guilde de voleurs", "typedirigeantinhabmulti"),
+("une guilde de marchands", "typedirigeantinhabmulti"),
+("une guilde d'artisans", "typedirigeantinhabmulti"),
+("une guilde d'assassins", "typedirigeantinhabmulti"),
+("une guilde de mercenaires", "typedirigeantinhabmulti"),
+
+("un mage isolé puissant", "typedirigeantinmagsolo"),
+("un mage isolé très puissant et versatile", "typedirigeantinmagsolo"),
+("un ensorceleur versatile", "typedirigeantinmagsolo"),
+("un chaman au charisme extraordinaire", "typedirigeantinmagsolo"),
+("un prête ayant une foi inébranlable", "typedirigeantinmagsolo"),
+
+("un conseil de mages", "typedirigeantinmagmulti"),
+("un temple de confession bonne", "typedirigeantinmagmulti"),
+("un ordre religieux extrémiste", "typedirigeantinmagmulti"),
+("un ordre religieux totalitaire", "typedirigeantinmagmulti"),
+
+("un magicien ayant pactisé avec un démon afin de ne plus veillir", "monstrueux"),
+("un doppelgänger usurpant l'identité du vrai dirigeant", "monstrueux"),
+("un pion au services d'une organisation", "monstrueux"),
+("un pion devant rendre des comptes à une créature puissantes (dragon, démon,...)", "monstrueux"),
+("dirigé par un flageleur mental qui s'amuse", "monstrueux")
 
 ;

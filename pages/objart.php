@@ -1,70 +1,70 @@
 <script type="text/javascript" src="javascript/valider.js"></script>
 <script type="text/javascript" src="javascript/verifint.js"></script>
 <?php
-include ('lib/compteur.php');
-include ('lib/objart.php');
+include('lib/compteur.php');
+include('lib/objart.php');
 
 $objet = array();
 $tabobjet=0;
 $total=0;
 
-if(!empty($_POST)){
-	$output='';
-	if(!empty($_POST['qtt'])&& $_POST['qtt']!=0 && $_POST['qtt']<1000){
-		for($i=0;$i<$_POST['qtt'];$i++,$tabobjet++){
-			$objet[$tabobjet]=creerobjart($_POST['Qualite']);
-			compteur('objart');
-		}
-		
-	if ($_POST['qtt']>1) $output.= '<h2>'.count($objet).' objets d\'arts</h2>';
-	else $output.= '<h2>'.count($objet).' objet d\'art</h2>';
-	
-		foreach ($objet as &$value) {
-			$output.= '- '.$value[0].' d\'une valeur de '.$value[1].' piËces d\'or <br />';
-			$total+=$value[1];
-		}
-		$output.='Valeur totale :'.$total.' piËces d\'or ';
-	
-	}
-	if ($_POST['qtt']==0) {
-		$output='Aucun trÈsor';	
-	}
-	if ($_POST['qtt']>=1000) {
-		$output='Trop de gÈnÈration demandÈe';
-	}
-	
-	$output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=objart">';
-		foreach ($_POST as $key=>$val){
-			$output.= "<input type='hidden' name='".$key."' value='".$val."'>";
-		}
-	$output.= '<input type="submit" name="genere" value="GÈnÈrer les mÍmes objets d\'arts" />';
-	$output.= '<input type="button" value="GÈnÈrer d\'autres objets d\'arts"  OnClick="window.location.href='."'index.php?page=objart'".'"></form>';
-	
-	echo $output;
-}
-else {	
-	$output ='';
-	$output.='<h2>Nombre d\'objet d\'art ‡ gÈnÈrer</h2>';
-	$output.='<form method="post" onsubmit="return valid();"action="index.php?page=objart">
+if (!empty($_POST)) {
+    $output='';
+    if (!empty($_POST['qtt'])&& $_POST['qtt']!=0 && $_POST['qtt']<1000) {
+        for ($i=0;$i<$_POST['qtt'];$i++,$tabobjet++) {
+            $objet[$tabobjet]=creerobjart($_POST['Qualite']);
+            compteur('objart');
+        }
+
+        if ($_POST['qtt']>1) {
+            $output.= '<h2>'.count($objet).' objets d\'arts</h2>';
+        } else {
+            $output.= '<h2>'.count($objet).' objet d\'art</h2>';
+        }
+
+        foreach ($objet as &$value) {
+            $output.= '- '.$value[0].' d\'une valeur de '.$value[1].' piùces d\'or <br />';
+            $total+=$value[1];
+        }
+        $output.='Valeur totale :'.$total.' piùces d\'or ';
+    }
+    if ($_POST['qtt']==0) {
+        $output='Aucun trùsor';
+    }
+    if ($_POST['qtt']>=1000) {
+        $output='Trop de gùnùration demandùe';
+    }
+
+    $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=objart">';
+    foreach ($_POST as $key=>$val) {
+        $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
+    }
+    $output.= '<input type="submit" name="genere" value="Gùnùrer les mùmes objets d\'arts" />';
+    $output.= '<input type="button" value="Gùnùrer d\'autres objets d\'arts"  OnClick="window.location.href='."'index.php?page=objart'".'"></form>';
+
+    echo $output;
+} else {
+    $output ='';
+    $output.='<h2>Nombre d\'objet d\'art ù gùnùrer</h2>';
+    $output.='<form method="post" onsubmit="return valid();"action="index.php?page=objart">
 		<table>
 			<tr>
-				<td><label for="fp1">QuantitÈ :</label></td>
+				<td><label for="fp1">Quantitù :</label></td>
 				<td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
 				&nbsp;<font id="msgErreur" color="red"></tr>
 				<tr>
-				<td><label for="qlt">QualitÈ :</label></td>
+				<td><label for="qlt">Qualitù :</label></td>
 				<td><select name="Qualite">
-					<OPTION VALUE="0">Toute (10 ‡ 12000 po)</OPTION>
-					<OPTION VALUE="1">DÈcorative (10 ‡ 600 po)</OPTION>
-					<OPTION VALUE="2">Fine (100 ‡ 1800 po)</OPTION>
-					<OPTION VALUE="3">PrÈcieuse (400 ‡ 4000 po)</OPTION>
-					<OPTION VALUE="4">Chef d\'oeuvre (1000 ‡ 12000 po)</OPTION>
+					<OPTION VALUE="0">Toute (10 ù 12000 po)</OPTION>
+					<OPTION VALUE="1">Dùcorative (10 ù 600 po)</OPTION>
+					<OPTION VALUE="2">Fine (100 ù 1800 po)</OPTION>
+					<OPTION VALUE="3">Prùcieuse (400 ù 4000 po)</OPTION>
+					<OPTION VALUE="4">Chef d\'oeuvre (1000 ù 12000 po)</OPTION>
 					</SELECT></td>
 			</tr>
-			
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÈnÈrer" /></td></tr>		
-		</table>';	
-	echo $output;
+
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Gùnùrer" /></td></tr>
+		</table>';
+    echo $output;
 }
 ?>
-

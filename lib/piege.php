@@ -1,6 +1,7 @@
 <?php
-function creerpiege($puissance){
-	$piegetype1 = array ("aiguille empoisonnée est tirée vers lui",
+function creerpiege($puissance)
+{
+    $piegetype1 = array("aiguille empoisonnée est tirée vers lui",
 "bloc de pierre propulsé dans sa direction",
 "un rocher chute sur lui",
 "une faux tranchante s'attaque à lui",
@@ -29,7 +30,7 @@ function creerpiege($puissance){
 "une flèche acide de Melf est librée vers lui",
 "le sort Imprécation en extension d'effet est envoyé sur lui");
 
-$piegetype2 = array (
+    $piegetype2 = array(
 "une collone s'effondre sur lui",
 "une sort Eclair est libéré vers lui",
 "une faux dissimulée dans le mur est libérée en direction du joueur",
@@ -50,7 +51,7 @@ $piegetype2 = array (
 "une fosse hérissée de pieux (Xm de profondeur) s'ouvre sous ses pieds",
 "les murs se rapproche");
 
-$piegetype3 = array (
+    $piegetype3 = array(
 "un sort de barriere est libéré sur lui",
 "une brume acide s'échape des murs (comme sort)",
 "un sort de convocation de monstre VI est libéré",
@@ -73,26 +74,22 @@ $piegetype3 = array (
 "le sort plainte d'outre tombe est lancé");
 
 
-$action = array ("ouvre la porte", "actionne le levier" ,"passe la porte","touche la poignée","marche sur la dale",
+    $action = array("ouvre la porte", "actionne le levier" ,"passe la porte","touche la poignée","marche sur la dale",
 "ouvre la grille","allume une bougie","fait trop de bruit");
 
-	
-	$piege='';
-	switch($puissance){
-		case 0;
-			$piege.='Lorsque le Pj '. $action[rand(0,count($action)-1)]. ', '.$piegetype1[rand(0,count($piegetype1)-1)].'.';
-		break;
-		case 1;
-			$piege.='Lorsque le Pj '. $action[rand(0,count($action)-1)]. ', '.$piegetype2[rand(0,count($piegetype2)-1)].'.';
-		break;
-		case 2;
-			$piege.='Lorsque le Pj '. $action[rand(0,count($action)-1)]. ', '.$piegetype3[rand(0,count($piegetype3)-1)].'.';
-		break;
-		
-	}
-	return $piege;
+
+    $piege='';
+    switch ($puissance) {
+        case 0:
+            $piege.='Lorsque le Pj '. $action[rand(0, count($action)-1)]. ', '.$piegetype1[rand(0, count($piegetype1)-1)].'.';
+        break;
+        case 1:
+            $piege.='Lorsque le Pj '. $action[rand(0, count($action)-1)]. ', '.$piegetype2[rand(0, count($piegetype2)-1)].'.';
+        break;
+        case 2:
+            $piege.='Lorsque le Pj '. $action[rand(0, count($action)-1)]. ', '.$piegetype3[rand(0, count($piegetype3)-1)].'.';
+        break;
+
+    }
+    return $piege;
 }
-
-
-
-?>

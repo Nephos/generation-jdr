@@ -3,4 +3,3 @@ $db_servername = "localhost";
 $db_database = "generation_jdr";
 $db_username = "root";
 $db_password = "toor";
-?>

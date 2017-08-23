@@ -1,7 +1,6 @@
 <?php
 
-function creervoleur(){
-	echo 'création du voleur';
+function creervoleur()
+{
+    echo 'création du voleur';
 }
-
-?>

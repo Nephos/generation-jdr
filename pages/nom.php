@@ -1,44 +1,40 @@
-﻿<script type="text/javascript" src="javascript/valider.js"></script>
+<script type="text/javascript" src="javascript/valider.js"></script>
 <script type="text/javascript" src="javascript/verifint.js"></script>
 <?php
-include ('lib/compteur.php');
-include ('lib/nom.php');
+include('lib/compteur.php');
+include('lib/nom.php');
 
 $noms = array();
 $tabnom=0;
 $total=0;
 $output='';
-if(!empty($_POST)){
-	if(!empty($_POST['qtt'])&& $_POST['qtt']!=0 && $_POST['qtt']<1000){
-		
-		for($i=0;$i<$_POST['qtt'];$i++,$tabnom++){
-			$noms[$tabnom]=creernom($_POST['nbrsyl'], $_POST['letdebut'], $_POST['letfin']);
-			//compteur('nom');
-		}
-		
-		foreach ($noms as &$value) {
-			$output.= '- '.$value.'<br />';
-			
-		}
-		
-	}
-	if ($_POST['qtt']==0) {
-		$output='Aucun nom demandé';	
-	}
-	if ($_POST['qtt']>=1000) {
-		$output='Trop de génération demandée';
-	}
-	$output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=nom">';
-		
-	$output.= '<input type="submit" name="genere" value="Générer les mêmes noms" /></form>';
-	$output.= '<input type="button" value="Générer d\'autres noms"  OnClick="window.location.href='."'index.php?page=nom'".'">';
-	
-	echo $output;
-}
-else {
-	$output ='';
-	$output.='<h2>Nombre de nom à générer</h2>';
-	$output.='<form method="post" onsubmit="return compte();" action="index.php?page=nom">
+if (!empty($_POST)) {
+    if (!empty($_POST['qtt'])&& $_POST['qtt']!=0 && $_POST['qtt']<1000) {
+        for ($i=0;$i<$_POST['qtt'];$i++,$tabnom++) {
+            $noms[$tabnom]=creernom($_POST['nbrsyl'], $_POST['letdebut'], $_POST['letfin']);
+            //compteur('nom');
+        }
+
+        foreach ($noms as &$value) {
+            $output.= '- '.$value.'<br />';
+        }
+    }
+    if ($_POST['qtt']==0) {
+        $output='Aucun nom demandé';
+    }
+    if ($_POST['qtt']>=1000) {
+        $output='Trop de génération demandée';
+    }
+    $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=nom">';
+
+    $output.= '<input type="submit" name="genere" value="Générer les mêmes noms" /></form>';
+    $output.= '<input type="button" value="Générer d\'autres noms"  OnClick="window.location.href='."'index.php?page=nom'".'">';
+
+    echo $output;
+} else {
+    $output ='';
+    $output.='<h2>Nombre de nom à générer</h2>';
+    $output.='<form method="post" onsubmit="return compte();" action="index.php?page=nom">
 		<table>
 			<tr>
 				<td><label>Quantité de noms à générer :</label></td>
@@ -72,8 +68,8 @@ else {
 			<tr>
 				<td> Nom composé?  <input type="checkbox" name="compos" value="Airbag"></td>
 			</tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>		
-		</table>';	
-	echo $output;
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+		</table>';
+    echo $output;
 }
 ?>

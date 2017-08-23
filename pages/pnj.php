@@ -1,40 +1,42 @@
 <script type="text/javascript" src="javascript/valider.js"></script>
 <script type="text/javascript" src="javascript/verifint.js"></script>
 <?php
-include ('lib/compteur.php');
-include ('lib/creerguerrier.php');
-include ('lib/creervoleur.php');
-include ('lib/creerpretre.php');
-include ('lib/creermage.php');
+include('lib/compteur.php');
+include('lib/creerguerrier.php');
+include('lib/creervoleur.php');
+include('lib/creerpretre.php');
+include('lib/creermage.php');
 
 
-if(!empty($_POST)){
-	$output='';
-	//$output=print_r($_POST);
-	if ($_POST['classe']==0) $classe=rand(1,4);
-	else $classe=$_POST['classe'];
-	
-	
-	switch ($classe){
-		case 1 : 
-			creerguerrier($_POST['tirage'],$_POST['race']);		
-		break;
-		case 2 : creermage();
-		break;
-		case 3 : creervoleur();
-		break;
-		case 4 : creerpretre();
-		break;
-	}
-	$output.= '<input type="submit" name="genere" value="Générer le mêmes PNJ" /></form>';
-	$output.= '<input type="button" value="Générer un autre PNJ"  OnClick="window.location.href='."'index.php?page=pnj'".'">';
-	
-	echo $output;
-}
-else {	
-	$output ='';
-	$output.='<h2>Génération d\'un PNJ</h2>';
-	$output.='<form method="post" onsubmit="return valid();"action="index.php?page=pnj">
+if (!empty($_POST)) {
+    $output='';
+    //$output=print_r($_POST);
+    if ($_POST['classe']==0) {
+        $classe=rand(1, 4);
+    } else {
+        $classe=$_POST['classe'];
+    }
+
+
+    switch ($classe) {
+        case 1:
+            creerguerrier($_POST['tirage'], $_POST['race']);
+        break;
+        case 2: creermage();
+        break;
+        case 3: creervoleur();
+        break;
+        case 4: creerpretre();
+        break;
+    }
+    $output.= '<input type="submit" name="genere" value="Générer le mêmes PNJ" /></form>';
+    $output.= '<input type="button" value="Générer un autre PNJ"  OnClick="window.location.href='."'index.php?page=pnj'".'">';
+
+    echo $output;
+} else {
+    $output ='';
+    $output.='<h2>Génération d\'un PNJ</h2>';
+    $output.='<form method="post" onsubmit="return valid();"action="index.php?page=pnj">
 		<table>
 			<tr>
 				<td><label>Tirage :</label></td>
@@ -69,9 +71,9 @@ else {
 					<OPTION VALUE="5">Nain</OPTION>
 					<OPTION VALUE="6">Demi-Elfe</OPTION>
 					<OPTION VALUE="7">Elfe</OPTION>
-					
+
 					humain halfelins gnome demi-orque nain demi-elfe elfe
-					
+
 					</select>
 				</td>
 			</tr>
@@ -106,8 +108,8 @@ else {
 				<td><label>Objectif(s) :</label></td>
 				<td><input type="checkbox" name="Equipement"></td>
 			</tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>		
-		</table>';	
-	echo $output;
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+		</table>';
+    echo $output;
 }
 ?>

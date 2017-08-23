@@ -3,16 +3,15 @@
 <script type="text/javascript" src="javascript/des.js"></script>
 <?php
 
-if(!empty($_POST)){
- print_r($_POST);
- 
- 
- foreach ($_POST['typededes'] as &$value) {
-		echo '-'.$value.'<br />';
-}
-}
-else {
-	?>
+if (!empty($_POST)) {
+    print_r($_POST);
+
+
+    foreach ($_POST['typededes'] as &$value) {
+        echo '-'.$value.'<br />';
+    }
+} else {
+    ?>
 	<h2>Lanceur de dés</h2>
 	<form method="post" id="dfpa">
   	<table><tr><td>Lancer : </td>
@@ -39,11 +38,11 @@ else {
     </tr>
     <tr><td><input type="submit" size="5" onclick="droll();return false;" name="sok" style="bold" value="Lancer !"></td></tr>
     </table>
-    
+
 	<br />
-	
+
 	<h4>Utilisation rapide :</h4>
-  
+
 	<p>
 
 	Choisir l'un des dés suivants :
@@ -81,8 +80,6 @@ else {
 
 
 </form>
-<?php }
+<?php
+}
 ?>
-
-
-
