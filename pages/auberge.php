@@ -45,13 +45,13 @@ if (!empty($_POST)) {
     $output ='';
     $output.='<h2>Nombre d\'auberge à générer</h2>';
     $output.='<form method="post" onsubmit="return valid();" action="index.php?page=auberge">
-		<table>
-			<tr>
-				<td><label for="qtt">Quantité :</label></td>
-				<td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
-				&nbsp;<font id="msgErreur" color="red"></tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
-		</table>';
+  <table>
+  <tr>
+  <td><label for="qtt">Quantité :</label></td>
+  <td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
+  &nbsp;<font id="msgErreur" color="red"></tr>
+  <tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+  </table>';
     echo $output;
 }
 ?>

@@ -16,8 +16,6 @@ if (!empty($_POST)) {
             compteur('gemme');
         }
 
-
-
         if ($_POST['qtt']>1) {
             $output.= '<h2>'.count($gemmes).' pierres précieuses</h2>';
         } else {
