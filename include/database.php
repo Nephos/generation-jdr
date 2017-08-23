@@ -22,5 +22,16 @@ function db_get_one_random_partial_value($class)
     $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND() LIMIT 1;");
     $query->execute(["class" => $class]);
     $result = $query->fetch();
-    return $result['value'];
+    return $result["value"];
+}
+
+function db_get_random_partial_values($class, $limitn = 1)
+{
+    global $db;
+    $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND() LIMIT $limitn;");
+    $query->execute(["class" => $class]);
+    $result = $query->fetchAll();
+    return array_map(function ($e) {
+        return $e["value"];
+    }, $result);
 }
