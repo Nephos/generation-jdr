@@ -29,22 +29,22 @@ if (!empty($_POST)) {
         case 4: creerpretre();
         break;
     }
-    $output.= '<input type="submit" name="genere" value="Générer le mêmes PNJ" /></form>';
-    $output.= '<input type="button" value="Générer un autre PNJ"  OnClick="window.location.href='."'index.php?page=pnj'".'">';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer le mÃªmes PNJ" /></form>';
+    $output.= '<input type="button" value="GÃ©nÃ©rer un autre PNJ"  OnClick="window.location.href='."'index.php?page=pnj'".'">';
 
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Génération d\'un PNJ</h2>';
+    $output.='<h2>GÃ©nÃ©ration d\'un PNJ</h2>';
     $output.='<form method="post" onsubmit="return valid();"action="index.php?page=pnj">
 		<table>
 			<tr>
 				<td><label>Tirage :</label></td>
 				<td COLSPAN="3"><select name="tirage">
 					<OPTION VALUE="0">3D6, 6 fois</OPTION>
-					<OPTION VALUE="1">4D6 - dé le plus bas, 6 fois</OPTION>
+					<OPTION VALUE="1">4D6 - dÃ© le plus bas, 6 fois</OPTION>
 					<OPTION VALUE="2">3D6, 7 fois - valeur la plus basse</OPTION>
-					<OPTION VALUE="3">4D6 - dé le plus bas, 7 fois - valeur la plus basse</OPTION>
+					<OPTION VALUE="3">4D6 - dÃ© le plus bas, 7 fois - valeur la plus basse</OPTION>
 					<OPTION VALUE="4">2D6+6, 6 fois</OPTION>
 					<OPTION VALUE="5">3D6 on relance les 1, 6 fois</OPTION>
 					<OPTION VALUE="6">Distribution des points (automatique)</OPTION>
@@ -54,16 +54,16 @@ if (!empty($_POST)) {
 			<tr>
 				<td><label>Classe :</label></td>
 				<td><select name="classe">
-					<OPTION VALUE="0">Aléatoire</OPTION>
+					<OPTION VALUE="0">AlÃ©atoire</OPTION>
 					<OPTION VALUE="1">Guerrier</OPTION>
 					<OPTION VALUE="2">Mage</OPTION>
 					<OPTION VALUE="3">Voleur</OPTION>
-					<OPTION VALUE="4">Prêtre</OPTION>
+					<OPTION VALUE="4">PrÃªtre</OPTION>
 					</select>
 				</td>
 				<td><label>Race :</label></td>
 				<td><select name="race">
-					<OPTION VALUE="0">Aléatoire</OPTION>
+					<OPTION VALUE="0">AlÃ©atoire</OPTION>
 					<OPTION VALUE="1">Humain</OPTION>
 					<OPTION VALUE="2">Halfelin</OPTION>
 					<OPTION VALUE="3">Gnome</OPTION>
@@ -80,7 +80,7 @@ if (!empty($_POST)) {
 			<tr>
 				<td><label>FP :</label></td>
 				<td><select name="fp">
-					<OPTION VALUE="0">Aléatoire</OPTION>
+					<OPTION VALUE="0">AlÃ©atoire</OPTION>
 					<OPTION VALUE="1">FP 1</OPTION>
 					<OPTION VALUE="2">FP 2</OPTION>
 					<OPTION VALUE="3">FP 3</OPTION>
@@ -89,7 +89,7 @@ if (!empty($_POST)) {
 				</td>
 				<td><label>Alignement :</label></td>
 				<td><select name="fp">
-					<OPTION VALUE="0">Aléatoire</OPTION>
+					<OPTION VALUE="0">AlÃ©atoire</OPTION>
 					<OPTION VALUE="1">LB</OPTION>
 					<OPTION VALUE="2">NB</OPTION>
 					<OPTION VALUE="3">CB</OPTION>
@@ -108,7 +108,7 @@ if (!empty($_POST)) {
 				<td><label>Objectif(s) :</label></td>
 				<td><input type="checkbox" name="Equipement"></td>
 			</tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 		</table>';
     echo $output;
 }

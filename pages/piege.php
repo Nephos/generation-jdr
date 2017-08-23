@@ -17,9 +17,9 @@ if (!empty($_POST)) {
         }
 
         if ($_POST['qtt']>1) {
-            $output.= '<h2>'.count($piege).' pièges</h2>';
+            $output.= '<h2>'.count($piege).' piÃ¨ges</h2>';
         } else {
-            $output.= '<h2>'.count($piege).' piège</h2>';
+            $output.= '<h2>'.count($piege).' piÃ¨ge</h2>';
         }
 
         foreach ($piege as &$value) {
@@ -27,38 +27,38 @@ if (!empty($_POST)) {
         }
     }
     if ($_POST['qtt']==0) {
-        $output='Aucun piège';
+        $output='Aucun piÃ¨ge';
     }
     if ($_POST['qtt']>=1000) {
-        $output='Trop de génération demandée';
+        $output='Trop de gÃ©nÃ©ration demandÃ©e';
     }
     $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=piege">';
     foreach ($_POST as $key=>$val) {
         $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
     }
-    $output.= '<input type="submit" name="genere" value="Générer les mêmes pieges" />';
-    $output.= '<input type="button" value="Générer d\'autres pieges"  OnClick="window.location.href='."'index.php?page=piege'".'"></form>';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer les mÃªmes pieges" />';
+    $output.= '<input type="button" value="GÃ©nÃ©rer d\'autres pieges"  OnClick="window.location.href='."'index.php?page=piege'".'"></form>';
 
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Nombre de piège à générer</h2>';
+    $output.='<h2>Nombre de piÃ¨ge Ã  gÃ©nÃ©rer</h2>';
     $output.='<form method="post" onsubmit="return valid();" action="index.php?page=piege">
 		<table>
 			<tr>
-				<td><label for="qtt">Quantité :</label></td>
+				<td><label for="qtt">QuantitÃ© :</label></td>
 				<td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
 				&nbsp;<font id="msgErreur" color="red"></tr>
 			<tr>
 				<td><label for="qlt">Facteur de puissance :</label></td>
 				<td><select name="puissance">
-					<OPTION VALUE="0">1 à 3</OPTION>
-					<OPTION VALUE="1">4 à 6</OPTION>
-					<OPTION VALUE="2">7 à 10</OPTION>
+					<OPTION VALUE="0">1 Ã  3</OPTION>
+					<OPTION VALUE="1">4 Ã  6</OPTION>
+					<OPTION VALUE="2">7 Ã  10</OPTION>
 
 					</SELECT></td>
 			</tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 		</table>';
     echo $output;
 }

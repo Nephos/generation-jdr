@@ -768,9 +768,9 @@ if (!empty($_POST['FP20'])) {
         }
     }
 }
-echo '<h1>Trésor</h1>';
+echo '<h1>TrÃ©sor</h1>';
 if ($potgene->getPc()>0||$potgene->getPa()>0||$potgene->getPo()>0||$potgene->getPp()>0) {
-    echo '<h2>Piéces</h2>';
+    echo '<h2>PiÃ©ces</h2>';
     echo $potgene->afficher();
 }
 $total+=$potgene->getPo();
@@ -779,23 +779,23 @@ $total+=($potgene->getPa())/10;
 $total+=($potgene->getPc())/100;
 
 if (count($gemmes)!=0) {
-    echo '<h2>'.count($gemmes).' pierres précieuse</h2>';
+    echo '<h2>'.count($gemmes).' pierres prÃ©cieuse</h2>';
     foreach ($gemmes as &$value) {
-        echo 'Une pierre de type '.$value[0].' d\'une valeur de '.$value[1].' piéce d\'or <br />';
+        echo 'Une pierre de type '.$value[0].' d\'une valeur de '.$value[1].' piÃ©ce d\'or <br />';
         $total+=$value[1];
     }
 }
 if (count($objart)!=0) {
     echo '<h2>'.count($objart).' objets arts</h2>';
     foreach ($objart as &$value) {
-        echo 'Un objet d\'art : '.$value[0].' d\'une valeur de '.$value[1].' piéce d\'or <br />';
+        echo 'Un objet d\'art : '.$value[0].' d\'une valeur de '.$value[1].' piÃ©ce d\'or <br />';
         $total+=$value[1];
     }
 }
 
 if ($total!=0) {
-    echo '<h2>Valeur total du trésor</h2>';
+    echo '<h2>Valeur total du trÃ©sor</h2>';
     echo $total.' pieces d\'or';
 } else {
-    echo 'Malheuresement cette rencontre n\'a généré aucun trésor';
+    echo 'Malheuresement cette rencontre n\'a gÃ©nÃ©rÃ© aucun trÃ©sor';
 }

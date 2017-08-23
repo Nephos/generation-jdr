@@ -17,52 +17,52 @@ if (!empty($_POST)) {
         }
 
         if ($_POST['qtt']>1) {
-            $output.= '<h2>'.count($gemmes).' pierres précieuses</h2>';
+            $output.= '<h2>'.count($gemmes).' pierres prÃ©cieuses</h2>';
         } else {
-            $output.= '<h2>'.count($gemmes).' pierre précieuse</h2>';
+            $output.= '<h2>'.count($gemmes).' pierre prÃ©cieuse</h2>';
         }
 
         foreach ($gemmes as &$value) {
-            $output.= '- '.$value[0].' d\'une valeur de '.$value[1].' piéces d\'or <br />';
+            $output.= '- '.$value[0].' d\'une valeur de '.$value[1].' piÃ©ces d\'or <br />';
             $total+=$value[1];
         }
-        $output.='<br />Valeur totale :'.$total.' piéces d\'or ';
+        $output.='<br />Valeur totale :'.$total.' piÃ©ces d\'or ';
     }
     if ($_POST['qtt']==0) {
-        $output='Aucun trésor';
+        $output='Aucun trÃ©sor';
     }
     if ($_POST['qtt']>=1000) {
-        $output='Trop de génération demandée';
+        $output='Trop de gÃ©nÃ©ration demandÃ©e';
     }
 
     $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=gemme">';
     foreach ($_POST as $key=>$val) {
         $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
     }
-    $output.= '<input type="submit" name="genere" value="Générer les mêmes gemmes" />';
-    $output.= '<input type="button" value="Générer d\'autres gemmes"  OnClick="window.location.href='."'index.php?page=gemme'".'"></form>';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer les mÃªmes gemmes" />';
+    $output.= '<input type="button" value="GÃ©nÃ©rer d\'autres gemmes"  OnClick="window.location.href='."'index.php?page=gemme'".'"></form>';
 
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Nombre de gemme à générer</h2>';
+    $output.='<h2>Nombre de gemme Ã  gÃ©nÃ©rer</h2>';
     $output.='<form method="post" onsubmit="return valid();" action="index.php?page=gemme">
 		<table>
 			<tr>
-				<td><label>Quantité :</label></td>
+				<td><label>QuantitÃ© :</label></td>
 				<td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
 				&nbsp;<font id="msgErreur" color="red"></tr>
 			<tr>
-				<td><label>Qualité :</label></td>
+				<td><label>QualitÃ© :</label></td>
 				<td><select name="Qualite">
-					<option value="0">Toute (4 à 8000 po)</option>
-					<option value="1">Décorative (4 à 16 po)</option>
-					<option value="2">Fine (20 à 160 po)</option>
-					<option value="3">Précieuse (200 à 1600 po)</option>
-					<option value="4">Exeptionnelle (2000 à 8000 po)</option>
+					<option value="0">Toute (4 Ã  8000 po)</option>
+					<option value="1">DÃ©corative (4 Ã  16 po)</option>
+					<option value="2">Fine (20 Ã  160 po)</option>
+					<option value="3">PrÃ©cieuse (200 Ã  1600 po)</option>
+					<option value="4">Exeptionnelle (2000 Ã  8000 po)</option>
 					</select></td>
 			</tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 		</table>';
     echo $output;
 }

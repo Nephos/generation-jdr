@@ -20,24 +20,24 @@ if (!empty($_POST)) {
     foreach ($_POST as $key=>$val) {
         $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
     }
-    $output.= '<input type="submit" name="genere" value="Générer les mêmes noms" />';
-    $output.= '<input type="button" value="Générer d\'autres noms"  OnClick="window.location.href='."'index.php?page=nomevolue'".'"></form>';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer les mÃªmes noms" />';
+    $output.= '<input type="button" value="GÃ©nÃ©rer d\'autres noms"  OnClick="window.location.href='."'index.php?page=nomevolue'".'"></form>';
 
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Nombre de noms à générer</h2>';
+    $output.='<h2>Nombre de noms Ã  gÃ©nÃ©rer</h2>';
     $output.='<form method="post" onsubmit="return valid();" action="index.php?page=nomevolue">
 		<table>
 			<tr>
-				<td><label>Quantité :</label></td>
+				<td><label>QuantitÃ© :</label></td>
 				<td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
 				&nbsp;<font id="msgErreur" color="red"></tr>
 		 	</tr>
 		 	<tr>
 				<td><label>Race :</label></td>
 				<td><select name="race">
-					<option value="0">Aléatoire</option>
+					<option value="0">AlÃ©atoire</option>
 					<option value="1">Demi-elfe</option>
 					<option value="2">Demi-orque</option>
 					<option value="9">Drow</option>
@@ -55,13 +55,13 @@ if (!empty($_POST)) {
 		 	<tr>
 				<td><label>Sexe :</label></td>
 				<td><select name="sexe">
-					<option value="0">Aléatoire</option>
+					<option value="0">AlÃ©atoire</option>
 					<option value="1">Masculin</option>
-					<option value="2">Féminin</option>
+					<option value="2">FÃ©minin</option>
 
 					</select></td>
 			</tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 			</table>';
     echo $output;
 }

@@ -21,34 +21,34 @@ if (!empty($_POST)) {
             $output.= '<h2>'.count($objnm).' objet non magique</h2>';
         }
         foreach ($objnm as &$value) {
-            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' pièces d\'or <br />';
+            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' piÃ¨ces d\'or <br />';
             $total+=$value[1];
         }
-        $output.='<br />Valeur totale :'.$total.' pièces d\'or ';
+        $output.='<br />Valeur totale :'.$total.' piÃ¨ces d\'or ';
     }
     if ($_POST['qtt']==0) {
         $output='Aucun objet';
     }
     if ($_POST['qtt']>=1000) {
-        $output='Trop de génération demandée';
+        $output='Trop de gÃ©nÃ©ration demandÃ©e';
     }
     $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=objnm">';
     foreach ($_POST as $key=>$val) {
         $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
     }
-    $output.= '<input type="submit" name="genere" value="Générer les mêmes objets non-magique" />';
-    $output.= '<input type="button" value="Générer d\'autres objets non-magique"  OnClick="window.location.href='."'index.php?page=objnm'".'"></form>';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer les mÃªmes objets non-magique" />';
+    $output.= '<input type="button" value="GÃ©nÃ©rer d\'autres objets non-magique"  OnClick="window.location.href='."'index.php?page=objnm'".'"></form>';
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Nombre d\'objet non magique à générer</h2>';
+    $output.='<h2>Nombre d\'objet non magique Ã  gÃ©nÃ©rer</h2>';
     $output.='<form name="generer" method="post" onsubmit="return valid();" action="index.php?page=objnm">
 		<table>
 			<tr>
-				<td><label for="qtt">Quantité :</label></td>
+				<td><label for="qtt">QuantitÃ© :</label></td>
 				<td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
 				&nbsp;<font id="msgErreur" color="red"></tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 		</table>';
     echo $output;
 }

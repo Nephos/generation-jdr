@@ -24,33 +24,33 @@ if (!empty($_POST)) {
         }
 
         foreach ($auberge as &$value) {
-            $output.= '- '.$value.'.<a href="index.php?page=aubergedetail&nom='.urlencode($value).'" ><i>Détail</i></a><br />';
+            $output.= '- '.$value.'.<a href="index.php?page=aubergedetail&nom='.urlencode($value).'" ><i>DÃ©tail</i></a><br />';
         }
     }
     if ($_POST['qtt']==0) {
         $output='Aucune auberge';
     }
     if ($_POST['qtt']>=1000) {
-        $output='Trop de génération demandée';
+        $output='Trop de gÃ©nÃ©ration demandÃ©e';
     }
     $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=auberge">';
     foreach ($_POST as $key=>$val) {
         $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
     }
-    $output.= '<input type="submit" name="genere" value="Générer les mêmes auberges" />';
-    $output.= '<input type="button" value="Générer d\'autres auberges"  OnClick="window.location.href='."'index.php?page=auberge'".'"></form>';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer les mÃªmes auberges" />';
+    $output.= '<input type="button" value="GÃ©nÃ©rer d\'autres auberges"  OnClick="window.location.href='."'index.php?page=auberge'".'"></form>';
 
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Nombre d\'auberge à générer</h2>';
+    $output.='<h2>Nombre d\'auberge Ã  gÃ©nÃ©rer</h2>';
     $output.='<form method="post" onsubmit="return valid();" action="index.php?page=auberge">
   <table>
   <tr>
-  <td><label for="qtt">Quantité :</label></td>
+  <td><label for="qtt">QuantitÃ© :</label></td>
   <td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
   &nbsp;<font id="msgErreur" color="red"></tr>
-  <tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+  <tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
   </table>';
     echo $output;
 }

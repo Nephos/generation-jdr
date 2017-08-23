@@ -1,5 +1,5 @@
 <?php
 $output='';
-$output.='<h2>En cours... prochainement sur vos écrans</h2>';
+$output.='<h2>En cours... prochainement sur vos Ã©crans</h2>';
 $output.='<center><img src="images/enconstruction.png" title="En construction" alt="En construction" /></center>';
 echo $output;

@@ -23,32 +23,32 @@ if (!empty($_POST)) {
         }
 
         foreach ($lieudit as &$value) {
-            $output.= '- '.$value.'.<a href="index.php?page=ville&nom='.urlencode($value).'" ><i>Détail</i></a><br />';
+            $output.= '- '.$value.'.<a href="index.php?page=ville&nom='.urlencode($value).'" ><i>DÃ©tail</i></a><br />';
         }
     }
     if ($_POST['qtt']==0) {
         $output='Aucun lieu-dit';
     }
     if ($_POST['qtt']>=1000) {
-        $output='Trop de génération demandée';
+        $output='Trop de gÃ©nÃ©ration demandÃ©e';
     }
     $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=lieudit">';
     foreach ($_POST as $key=>$val) {
         $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
     }
-    $output.= '<input type="submit" name="genere" value="Générer les mêmes lieux-dits" />';
-    $output.= '<input type="button" value="Générer d\'autres lieux-dits"  OnClick="window.location.href='."'index.php?page=lieudit'".'"></form>';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer les mÃªmes lieux-dits" />';
+    $output.= '<input type="button" value="GÃ©nÃ©rer d\'autres lieux-dits"  OnClick="window.location.href='."'index.php?page=lieudit'".'"></form>';
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Nombre de lieu-dit à générer</h2>';
+    $output.='<h2>Nombre de lieu-dit Ã  gÃ©nÃ©rer</h2>';
     $output.='<form method="post" onsubmit="return valid();" action="index.php?page=lieudit">
 		<table>
 			<tr>
-				<td><label for="qtt">Quantité :</label></td>
+				<td><label for="qtt">QuantitÃ© :</label></td>
 				<td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
 				&nbsp;<font id="msgErreur" color="red"></tr>
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 		</table>';
     echo $output;
 }

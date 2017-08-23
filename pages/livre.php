@@ -1,12 +1,12 @@
 <?php
 $output='';
-$output.='<h2>Ressources utilisées pour génération-jdr</h2>';
+$output.='<h2>Ressources utilisÃ©es pour gÃ©nÃ©ration-jdr</h2>';
 $output.='<b>Guide du maitre</b><br/>';
 $output.="Objet magique : 100 %<br/>";
 $output.="Potions : 100 %<br/>";
 $output.="Gemmes : 100 %<br/>";
-$output.="Trésors : 100 %<br/>";
-$output.="Pièges : 100 %<br/>";
+$output.="TrÃ©sors : 100 %<br/>";
+$output.="PiÃ¨ges : 100 %<br/>";
 $output.="<br/>";
 $output.='<b>Manuel des joueurs</b><br/>';
 $output.="Sorts profanes : 100 %<br/>";

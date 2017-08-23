@@ -1,6 +1,6 @@
 
 
-<a href="tresor.php">Générer un trésor complet en fonction du FP</a><br /><br />
-<img src="http://www.rhodesprivatetours.com/img/arrows/UnderConstruction.gif"><a href="gemme.php">Générer une ou plusieurs gemmes</a><br /><br />
-<img src="http://www.rhodesprivatetours.com/img/arrows/UnderConstruction.gif"><a href="objart.php">Générer un ou plusieurs objets d'arts</a><br /><br />
-<img src="http://www.rhodesprivatetours.com/img/arrows/UnderConstruction.gif"><a href="obm.php">Générer un ou plusieurs objet magique</a><br />
+<a href="tresor.php">GÃ©nÃ©rer un trÃ©sor complet en fonction du FP</a><br /><br />
+<img src="http://www.rhodesprivatetours.com/img/arrows/UnderConstruction.gif"><a href="gemme.php">GÃ©nÃ©rer une ou plusieurs gemmes</a><br /><br />
+<img src="http://www.rhodesprivatetours.com/img/arrows/UnderConstruction.gif"><a href="objart.php">GÃ©nÃ©rer un ou plusieurs objets d'arts</a><br /><br />
+<img src="http://www.rhodesprivatetours.com/img/arrows/UnderConstruction.gif"><a href="obm.php">GÃ©nÃ©rer un ou plusieurs objet magique</a><br />

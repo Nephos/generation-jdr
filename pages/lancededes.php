@@ -12,17 +12,17 @@ if (!empty($_POST)) {
     }
 } else {
     ?>
-	<h2>Lanceur de dés</h2>
+	<h2>Lanceur de dÃ©s</h2>
 	<form method="post" id="dfpa">
   	<table><tr><td>Lancer : </td>
 		<td><input id="typededes" type="text" name="typededes" value="" size="17" ></td>
     	<td>Option : </td><td><select name="resussite" >
 				<option value="0" selected > </option>
-				<option value="1"  >succès si &gt;</option>
-				<option value="2"  >succès si &gt;=</option>
-				<option value="3"  >succès si =</option>
-				<option value="4"  >succès si &lt;=</option>
-				<option value="5"  >succès si &lt;</option>
+				<option value="1"  >succÃ¨s si &gt;</option>
+				<option value="2"  >succÃ¨s si &gt;=</option>
+				<option value="3"  >succÃ¨s si =</option>
+				<option value="4"  >succÃ¨s si &lt;=</option>
+				<option value="5"  >succÃ¨s si &lt;</option>
 				<option value="6"  >second jet</option>
     			</select></td>
     	<td>&nbsp;<input id="rcan" type="text" name="seuil" value="" size="15" maxlength="50"></td>
@@ -45,7 +45,7 @@ if (!empty($_POST)) {
 
 	<p>
 
-	Choisir l'un des dés suivants :
+	Choisir l'un des dÃ©s suivants :
     </p>
 
 	<table>

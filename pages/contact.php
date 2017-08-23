@@ -16,9 +16,9 @@ if (isset($_POST['update']) && !empty($_POST['update'])) {
     $destinataire2='';
     $destinataire2=$_POST['mailexp'];
     $header2='From: '.$destinataire;
-    $message2='Vous avez envoyez le message suivant à l\'administrateur de generation-jdr' ."\n";
+    $message2='Vous avez envoyez le message suivant Ã  l\'administrateur de generation-jdr' ."\n";
     $message2.=$_POST['commentaires'];
-    $subject='Envoi d\'un mail à l\'équipe de generation-jdr sujet :'.$_POST['sujet'];
+    $subject='Envoi d\'un mail Ã  l\'Ã©quipe de generation-jdr sujet :'.$_POST['sujet'];
 
     mail($destinataire2, $subject, $message2, $header2); ?> <script> alert('Votre message est bien parti vous allez recevoir une confirmation par mail');</script>
   <script language="javascript" type="text/javascript">
@@ -33,7 +33,7 @@ if (isset($_POST['update']) && !empty($_POST['update'])) {
 $output='';
 
 $output.='<h2>Nous contacter</h2>';
-$output.='Une remarque? Un conseil? Un avis? Un bug? N\'hésitez pas, envoyez nous un petit mail';
+$output.='Une remarque? Un conseil? Un avis? Un bug? N\'hÃ©sitez pas, envoyez nous un petit mail';
 $output.='<form method="post" onsubmit="return validInscription();" action="index.php?page=contact">';
 $output.='<table>';
 $output.='<tr><td>Sujet:</td><td><input type="text" size="40" name="sujet" value=""/></td></tr>';

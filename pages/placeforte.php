@@ -19,7 +19,7 @@ include('lib/lieudit.php');
         $k=$k-20;
     }
     $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=placeforte">';
-    $output.= '<input type="button" value="Générer une autre place forte"  OnClick="window.location.href='."'index.php?page=placeforte'".'"></form>';
+    $output.= '<input type="button" value="GÃ©nÃ©rer une autre place forte"  OnClick="window.location.href='."'index.php?page=placeforte'".'"></form>';
 
 echo $output;
 

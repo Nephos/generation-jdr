@@ -4,10 +4,10 @@
 
 include('lib/rencontre.php');
 
-//$environnement = array("Quelconque", "Milieu aquatique","Plaine","Désert","Colline","Marécage","Forêt","Montagne","Souterrain");
-$climat = array("Quelconque","Chaud","Tempéré","Froid");
-$nivdifficul = array("facile","facile si bien négociée","équilibrée","trés difficile","injouable");
-$tabenvi = array("en milieu aquatique","dans les plaines","dans le désert","dans une colline","dans un marécage","dans une forêt","dans une montagne","dans un souterrain");
+//$environnement = array("Quelconque", "Milieu aquatique","Plaine","DÃ©sert","Colline","MarÃ©cage","ForÃªt","Montagne","Souterrain");
+$climat = array("Quelconque","Chaud","TempÃ©rÃ©","Froid");
+$nivdifficul = array("facile","facile si bien nÃ©gociÃ©e","Ã©quilibrÃ©e","trÃ©s difficile","injouable");
+$tabenvi = array("en milieu aquatique","dans les plaines","dans le dÃ©sert","dans une colline","dans un marÃ©cage","dans une forÃªt","dans une montagne","dans un souterrain");
 
 if (!empty($_POST)) {
     $output='';
@@ -45,16 +45,16 @@ if (!empty($_POST)) {
         $niv=$_POST['nivdiffi'];
     }
 
-    $fppj=calculFP($_POST['puissance'], $niv); //calcul de la difficulté
+    $fppj=calculFP($_POST['puissance'], $niv); //calcul de la difficultÃ©
     $fpcrea=fpdecreature($nbrcrea, $fppj);
     echo choixcreat($envi-1, $fpcrea);
 
 
-    $output.='La rencontre est concidérée comme '.$nivdifficul[$niv-1].'.';
+    $output.='La rencontre est concidÃ©rÃ©e comme '.$nivdifficul[$niv-1].'.';
     if ($niv-1==1) {
-        $output.='<br>Il faudra que les pj\'s découvrent le petit truc qui rends cette rencontre particuliere, par exemple un pretre en invisibilité qui soigne les créatures';
+        $output.='<br>Il faudra que les pj\'s dÃ©couvrent le petit truc qui rends cette rencontre particuliere, par exemple un pretre en invisibilitÃ© qui soigne les crÃ©atures';
     }
-    $output.='<br>La rencontre à lieu '.$tabenvi[$envi-1];
+    $output.='<br>La rencontre Ã  lieu '.$tabenvi[$envi-1];
 
     $output.= '<br>FPPJ : '.$fppj;
     $output.= '<br>FPCREA : '.$fpcrea;
@@ -65,7 +65,7 @@ if (!empty($_POST)) {
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Générer une rencontre</h2>';
+    $output.='<h2>GÃ©nÃ©rer une rencontre</h2>';
     $output.='<form method="post" onsubmit="return valid();" action="index.php?page=rencontre">
 		<table>
 			<tr>
@@ -96,17 +96,17 @@ if (!empty($_POST)) {
 				</td>
 				</tr>
 				<tr>
-				<td><label for="nbrcrea">Nombre de créature rencontrées :</label></td>
+				<td><label for="nbrcrea">Nombre de crÃ©ature rencontrÃ©es :</label></td>
 				<td>
 				<select name="nbrcrea">
-					<OPTION VALUE="0">Aléatoire</OPTION>
+					<OPTION VALUE="0">AlÃ©atoire</OPTION>
 					<OPTION VALUE="1">1</OPTION>
 					<OPTION VALUE="2">2</OPTION>
 					<OPTION VALUE="3">3</OPTION>
 					<OPTION VALUE="4">4</OPTION>
-					<OPTION VALUE="5">5 à 6</OPTION>
-					<OPTION VALUE="7">7 à 9</OPTION>
-					<OPTION VALUE="8">10 à 12</OPTION>
+					<OPTION VALUE="5">5 Ã  6</OPTION>
+					<OPTION VALUE="7">7 Ã  9</OPTION>
+					<OPTION VALUE="8">10 Ã  12</OPTION>
 
 				</SELECT>
 				</td>
@@ -114,13 +114,13 @@ if (!empty($_POST)) {
 
 
 				<tr>
-				<td><label for="nivdiffi">Difficulté de la rencontres :</label></td>
+				<td><label for="nivdiffi">DifficultÃ© de la rencontres :</label></td>
 				<td>
 					<select name="nivdiffi">
-					<OPTION VALUE="0">Aléatoire</OPTION>
+					<OPTION VALUE="0">AlÃ©atoire</OPTION>
 					<OPTION VALUE="1">Facile</OPTION>
-					<OPTION VALUE="2">Facile si bien négociée</OPTION>
-					<OPTION VALUE="3">Equilibré</OPTION>
+					<OPTION VALUE="2">Facile si bien nÃ©gociÃ©e</OPTION>
+					<OPTION VALUE="3">EquilibrÃ©</OPTION>
 					<OPTION VALUE="4">Tres difficile</OPTION>
 					<OPTION VALUE="5">Injouables</OPTION>
 
@@ -133,10 +133,10 @@ if (!empty($_POST)) {
 					<OPTION VALUE="0">Quelconque</OPTION>
 					<OPTION VALUE="1">Milieu aquatique</OPTION>
 					<OPTION VALUE="2">Plaine</OPTION>
-					<OPTION VALUE="3">Désert</OPTION>
+					<OPTION VALUE="3">DÃ©sert</OPTION>
 					<OPTION VALUE="4">Colline</OPTION>
-					<OPTION VALUE="5">Marécage</OPTION>
-					<OPTION VALUE="6">Forêt</OPTION>
+					<OPTION VALUE="5">MarÃ©cage</OPTION>
+					<OPTION VALUE="6">ForÃªt</OPTION>
 					<OPTION VALUE="7">Montagne</OPTION>
 					<OPTION VALUE="8">Souterrain</OPTION>
 				</SELECT></td>
@@ -147,12 +147,12 @@ if (!empty($_POST)) {
 				<td><select name="climat">
 					<OPTION VALUE="0">Quelconque</OPTION>
 					<OPTION VALUE="1">Chaud</OPTION>
-					<OPTION VALUE="2">Tempéré</OPTION>
+					<OPTION VALUE="2">TempÃ©rÃ©</OPTION>
 					<OPTION VALUE="3">Froid</OPTION>
 				</SELECT></td>
 			</tr>
 
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 		</table>';
     echo $output;
 }

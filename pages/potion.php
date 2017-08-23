@@ -22,36 +22,36 @@ if (!empty($_POST)) {
         }
 
         foreach ($objet as &$value) {
-            $output.= '- '.$value[0].' d\'une valeur de '.$value[1].' pièces d\'or <br />';
+            $output.= '- '.$value[0].' d\'une valeur de '.$value[1].' piÃ¨ces d\'or <br />';
             $total+=$value[1];
         }
-        $output.='Valeur totale :'.$total.' pièces d\'or ';
+        $output.='Valeur totale :'.$total.' piÃ¨ces d\'or ';
     }
     if ($_POST['qtt']==0) {
-        $output='Aucun trésor';
+        $output='Aucun trÃ©sor';
     }
     if ($_POST['qtt']>=1000) {
-        $output='Trop de génération demandée';
+        $output='Trop de gÃ©nÃ©ration demandÃ©e';
     }
 
     $output.= '	<form method="post" onsubmit="return valid();" action="index.php?page=potion">';
     foreach ($_POST as $key=>$val) {
         $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
     }
-    $output.= '<input type="submit" name="genere" value="Générer les mêmes potions" />';
-    $output.= '<input type="button" value="Générer d\'autres potions"  OnClick="window.location.href='."'index.php?page=potion'".'"></form>';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer les mÃªmes potions" />';
+    $output.= '<input type="button" value="GÃ©nÃ©rer d\'autres potions"  OnClick="window.location.href='."'index.php?page=potion'".'"></form>';
     echo $output;
 } else {
     $output ='';
-    $output.='<h2>Nombre de potion à générer</h2>';
+    $output.='<h2>Nombre de potion Ã  gÃ©nÃ©rer</h2>';
     $output.='<form method="post" onsubmit="return valid();"action="index.php?page=potion">
 		<table>
 			<tr>
-				<td><label for="fp1">Quantité :</label></td>
+				<td><label for="fp1">QuantitÃ© :</label></td>
 				<td><input type="text" id="qtt" name="qtt" value="" onKeyUp="javascript:filter_numeric(this);"/></td>
 				&nbsp;<font id="msgErreur" color="red"></tr>
 				<tr>
-				<td><label for="qlt">Qualité :</label></td>
+				<td><label for="qlt">QualitÃ© :</label></td>
 				<td><select name="Qualite">
 					<OPTION VALUE="0">Faible</OPTION>
 					<OPTION VALUE="1">Intermediaire</OPTION>
@@ -59,7 +59,7 @@ if (!empty($_POST)) {
 					</SELECT></td>
 			</tr>
 
-			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="3"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 		</table>';
     echo $output;
 }

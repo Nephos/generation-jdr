@@ -19,14 +19,14 @@ if (isset($_GET['nom'])) {
     $_POST['particu']=0;
     $_POST['eco']=0;
 } else {
-    $nomduvillage=creerlieudit(1);                // génération du nom de l'auberge
+    $nomduvillage=creerlieudit(1);                // gÃ©nÃ©ration du nom de l'auberge
 }
 
 if (!empty($_POST) || isset($_GET['nom'])) {
     $output='';
 
-    $taillenom=array('',' lieu-dit composé',' hameau composé',' village composé',' bourg (petite ville) composé',' e ville importante composée','e grande ville composée','e cité composée','e métropole composée','e ville spéciale');
-    $typeville=array('isolée et repliée sur elle-même','ouverte vers l\'extérieur','cosmopolite où tout un chacun a le droit d\'y loger');
+    $taillenom=array('',' lieu-dit composÃ©',' hameau composÃ©',' village composÃ©',' bourg (petite ville) composÃ©',' e ville importante composÃ©e','e grande ville composÃ©e','e citÃ© composÃ©e','e mÃ©tropole composÃ©e','e ville spÃ©ciale');
+    $typeville=array('isolÃ©e et repliÃ©e sur elle-mÃªme','ouverte vers l\'extÃ©rieur','cosmopolite oÃ¹ tout un chacun a le droit d\'y loger');
     $race=array('humain','halfelin','elfe','nain','gnome','demi-elfe','demi-orque','');
     $nbrhabitantparrace=array(0,0,0,0,0,0,0,0);
     $nbrhabitantparraceHUM=array(0,0,0,0,0,0,0,0);
@@ -105,7 +105,7 @@ if (!empty($_POST) || isset($_GET['nom'])) {
             $aventurier[rand(0, $nbraventuriers-1)]++;
         }
     }
-    switch ($_POST['eco']) { //calcule de l'économie
+    switch ($_POST['eco']) { //calcule de l'Ã©conomie
         case 1: $economie+=rand(1, 5); break;
         case 2: $economie+=rand(5, 15);    break;
         case 3:    $economie+=rand(15, 20); break;
@@ -131,21 +131,21 @@ if (!empty($_POST) || isset($_GET['nom'])) {
         $heros-=10;
         $nbrheros++;
     }
-    //début de la ville
+    //dÃ©but de la ville
     $output.='<h2>'.$nomduvillage.'</h2>';
     $output.=$nomduvillage. ' est un';
     $output.=$taillenom[$taille];
     $output.=' de plus ou moins '.$nbrmaison;
-    $output.=' maisons et autres bâtiments. Au dernier recensement, la population comptait '.$nbrhabitant.' individus. <br />';
-    $output.=$nomduvillage.' est une société '.$typeville[$typevillenum].' de ce fait les races s\'y retrouvent ';
+    $output.=' maisons et autres bÃ¢timents. Au dernier recensement, la population comptait '.$nbrhabitant.' individus. <br />';
+    $output.=$nomduvillage.' est une sociÃ©tÃ© '.$typeville[$typevillenum].' de ce fait les races s\'y retrouvent ';
     if ($typevillenum==0) {
-        $output.='sensiblement concentrées';
+        $output.='sensiblement concentrÃ©es';
     } elseif ($typevillenum==1) {
-        $output.='concentrées mais avec quelques communautés ou familles différentes';
+        $output.='concentrÃ©es mais avec quelques communautÃ©s ou familles diffÃ©rentes';
     } else {
-        $output.='fort différentes avec beaucoup de muticulturalité';
+        $output.='fort diffÃ©rentes avec beaucoup de muticulturalitÃ©';
     }
-    $output.=' et réparties plus exactement en ';
+    $output.=' et rÃ©parties plus exactement en ';
     if ($typevillenum==0) {
         if ($nbrhabitantparrace[0]>0) {
             $output.=$nbrhabitantparrace[0].' humain';
@@ -216,7 +216,7 @@ if (!empty($_POST) || isset($_GET['nom'])) {
 
 
     $nbrlieu=rand(0, 5);
-    $output.='<br><br><h4>Commerces, guildes et aventuriers, héros</h4>';
+    $output.='<br><br><h4>Commerces, guildes et aventuriers, hÃ©ros</h4>';
     if ($nbrbat==0) {
         $output.='<Il n\'y a aucun commerce qui vaille qu\'on s\'y attarde. <br>';
     } elseif ($nbrbat==1) {
@@ -227,28 +227,28 @@ if (!empty($_POST) || isset($_GET['nom'])) {
     //guildes
     if ($nbrguilde>0) {
         if ($nbrguilde==1) {
-            $output.='Il existe également une guilde (<a href="#bouton_texte2">voir la guilde</a>). <br>';
+            $output.='Il existe Ã©galement une guilde (<a href="#bouton_texte2">voir la guilde</a>). <br>';
         } else {
-            $output.=$nomduvillage.', possède également '.$nbrguilde.' guildes (<a href="#bouton_texte2">voir la liste des guildes</a>). <br>';
+            $output.=$nomduvillage.', possÃ¨de Ã©galement '.$nbrguilde.' guildes (<a href="#bouton_texte2">voir la liste des guildes</a>). <br>';
         }
     }
     if ($nbraventuriers>0) {
         if ($nbraventuriers==1) {
             $output.=$nomduvillage.' comporte en son sein un aventurier (<a href="#bouton_texte5">voir l\'aventurier</a>). <br>';
         } else {
-            $output.=$nomduvillage.' comporte également dans ses habitants '.$nbraventuriers.' aventuriers (<a href="#bouton_texte5">voir la liste des aventuriers</a>). <br>';
+            $output.=$nomduvillage.' comporte Ã©galement dans ses habitants '.$nbraventuriers.' aventuriers (<a href="#bouton_texte5">voir la liste des aventuriers</a>). <br>';
         }
     }
     if ($nbrheros>0) {
         if ($nbrheros==1) {
-            $output.='La ville a, de plus, la chance de compter parmi ses habitants un héros ayant accompli quelques chose d\'exeptionnel pour la ville ou ayant décidé de prendre sa retraite à '.$nomduvillage.'. (<a href="#bouton_texte6">voir le héro</a>). <br>';
+            $output.='La ville a, de plus, la chance de compter parmi ses habitants un hÃ©ros ayant accompli quelques chose d\'exeptionnel pour la ville ou ayant dÃ©cidÃ© de prendre sa retraite Ã  '.$nomduvillage.'. (<a href="#bouton_texte6">voir le hÃ©ro</a>). <br>';
         } else {
-            $output.=$nomduvillage.' a le privilège d\'avoir parmi ses habitants '.$nbrheros.' héros ayant accompli quelques chose d\'exeptionnel pour la ville ou ayant décidé de prendre leur retraite ici.(<a href="#bouton_texte6">voir liste des héros</a>). <br>';
+            $output.=$nomduvillage.' a le privilÃ¨ge d\'avoir parmi ses habitants '.$nbrheros.' hÃ©ros ayant accompli quelques chose d\'exeptionnel pour la ville ou ayant dÃ©cidÃ© de prendre leur retraite ici.(<a href="#bouton_texte6">voir liste des hÃ©ros</a>). <br>';
         }
     }
     if ($nbrlieu>0) {
         if ($nbrlieu==1) {
-            $output.='Un seul lieu mérite de s\'y attarder. (<a href="#bouton_texte7">voir le lieu</a>). <br>';
+            $output.='Un seul lieu mÃ©rite de s\'y attarder. (<a href="#bouton_texte7">voir le lieu</a>). <br>';
         } else {
             $output.="Il existe plusieurs lieux remarquables de par leur architecture ou la conception dans la ville.(<a href=\"#bouton_texte7\">voir liste les lieux</a>). <br>";
         }

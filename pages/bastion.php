@@ -1,6 +1,6 @@
 <?php
 print_r($_POST);
-$race = array('Ormazuriens','Chitiksss','Falaés','Marflings','Etinéens','Synovingiens');
+$race = array('Ormazuriens','Chitiksss','Fala×™s','Marflings','Etin×™ens','Synovingiens');
 $sexe = array('Masculin','Feminin');
 $force='';
 $physique='';
@@ -18,7 +18,7 @@ $puissance='';
 $pouvoir='';
 $output='';
 
-$output.='<h2>Création de personnage pour le Dernier Bastion</h2>';
+$output.='<h2>Cr×™ation de personnage pour le Dernier Bastion</h2>';
 if (!empty($_POST)) {
     switch ($_POST['race']) {
         case 0:
@@ -115,7 +115,7 @@ if (!empty($_POST)) {
     }
 
     if ($_POST['sexe']==1 && $_POST['race']==3) {
-        $output.='Pas de femelle chez les Marfling un male à donc été créé. Les attributs sont les suivants :';
+        $output.='Pas de femelle chez les Marfling un male × donc ×™t×™ cr×™×™. Les attributs sont les suivants :';
     } else {
         $output.='Vous avez choisi un '.$race[$_POST['race']].' de sexe '.$sexe[$_POST['sexe']].' les attributs sont les suivants :';
     }
@@ -131,7 +131,7 @@ if (!empty($_POST)) {
 					<td>'.$physique.'</td>
 				</tr>
 				<tr>
-					<td>Agilité : </td>
+					<td>Agilit×™ : </td>
 					<td>'.$agilite.'</td>
 				</tr>
 				<tr>
@@ -166,7 +166,7 @@ if (!empty($_POST)) {
     $output.='<h4>Attributs secondaires</h4>';
     $output.='<table>
 			<tr>
-				<td>Santé : </td>
+				<td>Sant×™ : </td>
 				<td>'.$sante.'</td>
 			</tr>
 			<tr>
@@ -182,7 +182,7 @@ if (!empty($_POST)) {
 				<td>'.$savoir.'</td>
 			</tr>
 			<tr>
-				<td>Magnétisme : </td>
+				<td>Magn×™tisme : </td>
 				<td>'.$magnetisme.'</td>
 			</tr>
 			<tr>
@@ -205,9 +205,9 @@ if (!empty($_POST)) {
     $output.='	<select name="race">
 					<option value="0">Ormazuriens</option>
 					<option value="1">Chitiksss</option>
-					<option value="2">Falaés</option>
+					<option value="2">Fala×™s</option>
 					<option value="3">Marflings</option>
-					<option value="4">Etinéens</option>
+					<option value="4">Etin×™ens</option>
 					<option value="5">Synovingiens</option>
 				</select><br />
 				<select name="sexe">

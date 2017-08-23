@@ -4,16 +4,16 @@ include('lib/newsletters.php');
 
 if (!empty($_POST)) {
     $output='';
-    $output.='Merci pour votre inscription, l\'adresse '.$_POST['mail'].' à bien été enregistrée<br/>';
-    $output.='A bientôt';
+    $output.='Merci pour votre inscription, l\'adresse '.$_POST['mail'].' Ã  bien Ã©tÃ© enregistrÃ©e<br/>';
+    $output.='A bientÃ´t';
     echo $output;
 
     newletters($_POST['mail']);
 } else {
     $output='';
     $output.='<h2>Newsletters</h2>';
-    $output.='Si vous désirez être tenu informé des mises-à-jour de génération-jdr il vous suffit d\'inscrire votre adresse mail.<br />';
-    $output.='Un mail ne sera envoyé qu\'à la venue d\'une nouvelle génération.<br />';
+    $output.='Si vous dÃ©sirez Ãªtre tenu informÃ© des mises-Ã -jour de gÃ©nÃ©ration-jdr il vous suffit d\'inscrire votre adresse mail.<br />';
+    $output.='Un mail ne sera envoyÃ© qu\'Ã  la venue d\'une nouvelle gÃ©nÃ©ration.<br />';
 
     $output.='<form method="post" onsubmit="return validInscription();" action="index.php?page=newsletter">
 			<table>
@@ -23,7 +23,7 @@ if (!empty($_POST)) {
 				<tr><td align="center" colspan="2"><input type="submit" name="generer" value="Envoyer" /></td></tr>
 			</table>
 			</form>';
-    $output.='<p>Pour vous désinscrire merci d\'envoyer un mail via la partie contact</p>';
+    $output.='<p>Pour vous dÃ©sinscrire merci d\'envoyer un mail via la partie contact</p>';
 
     echo $output;
 }

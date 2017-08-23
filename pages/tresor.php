@@ -747,9 +747,9 @@ if (!empty($_POST)) {
         }
     }
     $output='';
-    $output.='<h2>Trésor</h2>';
+    $output.='<h2>TrÃ©sor</h2>';
     if ($potgene->getPc()>0||$potgene->getPa()>0||$potgene->getPo()>0||$potgene->getPp()>0) {
-        $output.= '<h2>Pièces</h2>';
+        $output.= '<h2>PiÃ¨ces</h2>';
         $output.= $potgene->afficher();
     }
     $total+=$potgene->getPo();
@@ -759,13 +759,13 @@ if (!empty($_POST)) {
 
     if (count($gemmes)!=0) {
         if (count($gemmes)>1) {
-            $output.= '<h2>'.count($gemmes).' pierres précieuses</h2>';
+            $output.= '<h2>'.count($gemmes).' pierres prÃ©cieuses</h2>';
         } else {
-            $output.= '<h2>'.count($gemmes).' pierre précieuse</h2>';
+            $output.= '<h2>'.count($gemmes).' pierre prÃ©cieuse</h2>';
         }
 
         foreach ($gemmes as &$value) {
-            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' pièces d\'or <br />';
+            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' piÃ¨ces d\'or <br />';
             $total+=$value[1];
         }
     }
@@ -777,7 +777,7 @@ if (!empty($_POST)) {
         }
 
         foreach ($objart as &$value) {
-            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' pièces d\'or <br />';
+            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' piÃ¨ces d\'or <br />';
             $total+=$value[1];
         }
     }
@@ -789,7 +789,7 @@ if (!empty($_POST)) {
             $output.= '<h2>'.count($objnm).' objet non magique</h2>';
         }
         foreach ($objnm as &$value) {
-            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' pièces d\'or <br />';
+            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' piÃ¨ces d\'or <br />';
             $total+=$value[1];
         }
     }
@@ -802,24 +802,24 @@ if (!empty($_POST)) {
         }
 
         foreach ($objmaj as &$value) {
-            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' pièces d\'or <br />';
+            $output.= '-'.$value[0].' d\'une valeur de '.$value[1].' piÃ¨ces d\'or <br />';
             $total+=$value[1];
         }
     }
 
     if ($total!=0) {
-        $output.= '<h2>Valeur total du trésor</h2>';
+        $output.= '<h2>Valeur total du trÃ©sor</h2>';
         $output.= $total.' pieces d\'or';
     } else {
-        $output.= 'Malheuresement cette rencontre n\'a généré aucun trésor';
+        $output.= 'Malheuresement cette rencontre n\'a gÃ©nÃ©rÃ© aucun trÃ©sor';
     }
 
     $output.= '	<form method="post" onsubmit="return valid2();" action="index.php?page=tresor">';
     foreach ($_POST as $key=>$val) {
         $output.= "<input type='hidden' name='".$key."' value='".$val."'>";
     }
-    $output.= '<input type="submit" name="genere" value="Générer le même trésor" />';
-    $output.= '<input type="button" value="Générer un autre trésor"  OnClick="window.location.href='."'index.php?page=tresor'".'"></form>';
+    $output.= '<input type="submit" name="genere" value="GÃ©nÃ©rer le mÃªme trÃ©sor" />';
+    $output.= '<input type="button" value="GÃ©nÃ©rer un autre trÃ©sor"  OnClick="window.location.href='."'index.php?page=tresor'".'"></form>';
 
     echo $output;
 } else {
@@ -838,7 +838,7 @@ if (!empty($_POST)) {
 			<tr><td><label>FP9:</label></td><td><input type="text" id="FP9" name="FP9" value="" OnPaste="return false" onKeyUp="javascript:filter_numeric(this);"/></td><td><label>FP19:</label></td><td><input type="text" id="FP19" name="FP10" value="" OnPaste="return false" onKeyUp="javascript:filter_numeric(this);"/></td></tr>
 			<tr><td><label>FP10:</label></td><td><input type="text" id="FP10" name="FP10" value="" OnPaste="return false" onKeyUp="javascript:filter_numeric(this);"/></td><td><label>FP20:</label></td><td><input type="text" id="FP20" name="FP20" value="" OnPaste="return false;" onKeyUp="javascript:filter_numeric(this);"/></td></tr>
 
-			<tr><td align="center" colspan="4"><input type="submit" name="generer" value="Générer" /></td></tr>
+			<tr><td align="center" colspan="4"><input type="submit" name="generer" value="GÃ©nÃ©rer" /></td></tr>
 		</table></form>';
     echo $output;
 }

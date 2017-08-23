@@ -11,16 +11,16 @@
 				<td><label>BBA : </label></td><td><input type="text" name="BBA" value=""></td>
 			</tr>
 			<tr>
-				<td><label>Réflexes : </label></td><td><input type="text" name="ref" value=""></td>
+				<td><label>RÃ©flexes : </label></td><td><input type="text" name="ref" value=""></td>
 			</tr>
 			<tr>
 				<td><label>Vigueur : </label></td><td><input type="text" name="vig" value=""></td>
 			</tr>
 			<tr>
-				<td><label>Volonté : </label></td><td><input type="text" name="vol" value=""></td>
+				<td><label>VolontÃ© : </label></td><td><input type="text" name="vol" value=""></td>
 			</tr>
 			<tr>
-				<td><label>Spécial </label></td><td><input type="text" name="spe" value=""></td>
+				<td><label>SpÃ©cial </label></td><td><input type="text" name="spe" value=""></td>
 			</tr>
 			<tr><td align="center" colspan="3"><input type="submit" id="'.$niveau.'"name="Suivant" value="Suivant" /></td></tr>
 			<tr><td><input type="hidden" name="nomdeclasse"></td></tr>
