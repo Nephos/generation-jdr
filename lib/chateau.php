@@ -1,14 +1,14 @@
 <?php
 function creerchateau($taille)
 {
-    $taille1 = array("d'un abri fortifié","d'un refuge fortifié","d'une habitation fortifiée","d'une maison fortifiée","d'une demeure fortifiée","d'une résidence fortifiée","d'un manoir fortifié", );
-    $taille2 = array("d'un abri fortifié","d'un refuge fortifié","d'une habitation fortifiée","d'une maison fortifiée","d'une demeure fortifiée","d'une résidence fortifiée","d'un manoir fortifié","d'un palais fortifié","d'un donjon");
-    $taille3 = array("d'un abri fortifié","d'un refuge fortifié","d'une habitation fortifiée","d'une maison fortifiée","d'une demeure fortifiée","d'une résidence fortifiée","d'un manoir fortifié","d'un palais fortifié","d'un donjon","d'une tour","d'une bastille","d'une place-forte");
-    $taille4 = array("d'une habitation fortifiée","d'une maison fortifiée","d'une emeure fortifiée","d'une résidence fortifiée","d'un manoir fortifié","d'un palais fortifié","d'un donjon","d'un châtelet","d'une tour","d'une bastille");
-    $taille5 = array("d'un manoir fortifié","d'un palais fortifié","d'un châtelet","d'un donjon","d'une tour","d'une bastille","d'une place-forte","d'un fortin","d'un fort");
-    $taille6 = array("d'un donjon","d'une tour","d'une bastille","d'une place-forte","d'un châtelet","d'un fortin","d'un fort","d'une forteresse");
-    $taille7 = array("d'une tour","d'une bastille","d'une place-forte","d'un fortin","d'un châtelet","d'un fort","d'une forteresse","d'un château","d'une citadelle");
-    $taille8 = array("d'une bastille","d'une place-forte","d'un fortin","d'un fort","d'une forteresse","d'un château","d'une citadelle");
+    $taille1 = db_get_one_random_partial_value("ChateauTaille1");
+    $taille2 = db_get_one_random_partial_value("ChateauTaille2");
+    $taille3 = db_get_one_random_partial_value("ChateauTaille3");
+    $taille4 = db_get_one_random_partial_value("ChateauTaille4");
+    $taille5 = db_get_one_random_partial_value("ChateauTaille5");
+    $taille6 = db_get_one_random_partial_value("ChateauTaille6");
+    $taille7 = db_get_one_random_partial_value("ChateauTaille7");
+    $taille8 = db_get_one_random_partial_value("ChateauTaille8");
     $deterioration = array("");
     $amelioration = array(
             "<span style=\"border-bottom: 1px black dotted;\" title=\"Ouverture longue et étroite dans un mur pour tirer à l'arc ou à l'arbalète\">Archère</span>",
@@ -43,39 +43,12 @@ function creerchateau($taille)
             "<span style=\"border-bottom: 1px black dotted;\" title=\"Petit ouvrage de fortification isolé et fermé.\">Redoute</span>",
             "<span style=\"border-bottom: 1px black dotted;\" title=\"Tour permettant d'effectuer des tirs parallèles au mur à défendre.\">Tour flanquante</span>"
         );
-    $listechateau = array();
-    switch ($taille) {
-        case 1:
-            $listechateau=$taille1;
-        break;
-        case 2:
-            $listechateau=$taille2;
-        break;
-        case 3:
-            $listechateau=$taille3;
-        break;
-        case 4:
-            $listechateau=$taille4;
-        break;
-        case 5:
-            $listechateau=$taille5;
-        break;
-        case 6:
-            $listechateau=$taille6;
-        break;
-        case 7:
-            $listechateau=$taille7;
-        break;
-        case 8:
-            $listechateau=$taille8;
-        break;
-        }
+    $chateau = db_get_one_random_partial_value("ChateauTaille$taille");
 
-    $chateau=$listechateau[rand(0, count($listechateau)-1)];
-    if ($taille>6) {
-        $l=100;
+    if ($taille > 6) {
+        $l = 100;
         $ameliorations = array();
-        while (rand(1, 100)<$l) {
+        while (rand(1, 100) < $l) {
             $choix = rand(0, count($amelioration)-1);
             $ameliorations[strtolower($amelioration[$choix])] = $amelioration[$choix];
             unset($amelioration[$choix]);
@@ -86,12 +59,9 @@ function creerchateau($taille)
             $chateau.=' avec '.implode(", ", $ameliorations);
         }
     }
-
-
-
-
     return  $chateau;
 }
+
 function creeraddonmili()
 {
     $addon = array(
