@@ -3,7 +3,7 @@
 function creerchateau($taille)
 {
     $deterioration = array("");
-    $amelioration = db_get_random_partial_values("ChateauAmelioration", 25);
+    $amelioration = db_get_random_partial_values("ChateauAmelioration");
     $chateau = db_get_one_random_partial_value("ChateauTaille$taille");
 
     if ($taille > 6) {

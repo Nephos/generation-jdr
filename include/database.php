@@ -25,10 +25,15 @@ function db_get_one_random_partial_value($class)
     return $result["value"];
 }
 
-function db_get_random_partial_values($class, $limitn = 1)
+function db_get_random_partial_values($class, $limitn = null)
 {
     global $db;
-    $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND() LIMIT $limitn;");
+    $query = "";
+    if ($limitn == null) {
+        $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND();");
+    } else {
+        $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND() LIMIT $limitn;");
+    }
     $query->execute(["class" => $class]);
     $result = $query->fetchAll();
     return array_map(function ($e) {
