@@ -2,9 +2,6 @@
 
 function appeleconomie($economie, $nomduvillage, $particu, $Capfi)
 {
-    $listeexportfaible = db_get_random_partial_values("listeexportfaible");
-    $listeexportmoyen = db_get_random_partial_values("listeexportmoyen");
-    $listeexportfort = db_get_random_partial_values("listeexportfort");
     $listeexportmaritimefull = db_get_random_partial_values("listeexportmaritimefull");
     $listeexportmaritimefaible = db_get_random_partial_values("listeexportmaritimefaible");
     $listeutile=array();
@@ -15,20 +12,20 @@ function appeleconomie($economie, $nomduvillage, $particu, $Capfi)
     $sortie .= "L'économie de " . $nomduvillage . " est ";
     if ($economie<=10) {
         $sortie .= "faible";
-        $listeutile=$listeexportfaible;
+        $listeutile = db_get_random_partial_values("listeexportfaible");
         if ($particu==1) {
             array_merge($listeutile, $listeexportmaritimefaible);
         }
         $enplus="malgré tout ";
     } elseif ($economie<=15) {
         $sortie .= "moyenne";
-        $listeutile=$listeexportmoyen;
+        $listeutile = db_get_random_partial_values("listeexportmoyen");
         if ($particu==1) {
             array_merge($listeutile, $listeexportmaritimefull);
         }
     } else {
         $sortie .= "elevée";
-        $listeutile=$listeexportfort;
+        $listeutile = db_get_random_partial_values("listeexportfort");
         if ($particu==1) {
             array_merge($listeutile, $listeexportmaritimefull);
         }
