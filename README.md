@@ -9,7 +9,8 @@ Créer une base de donnée, par exemple:
 
 Installer la base de données:
 
-    mysql --user root --host 127.0.0.1 -p generation_jdr < sql/db.sql
+    mysql --user root --host 127.0.0.1 -p generation_jdr < sql/db.sql && \
+      mysql --user root --host 127.0.0.1 -p generation_jdr < sql/nom.sql
 
 Installer les identifiants de votre db dans le site:
 
