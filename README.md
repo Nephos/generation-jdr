@@ -14,7 +14,7 @@ Installer la base de données:
       mysql --user root --host 127.0.0.1 -p generation_jdr < sql/prenom.sql && \
       mysql --user root --host 127.0.0.1 -p generation_jdr < sql/nom.sql
 
-Installer les identifiants de votre db dans le site:
+Installer les identifiants de votre db dans le site (en copiant le fichier d'exemple et en indiquant les infos sur la base de données dans les globales):
 
     cp include/database_ids.php.sample include/database_ids.php
     edit include/database_ids.php
