@@ -76,28 +76,11 @@ function db_cache_get($class, $lines = 1, $order = "random", $unique = false)
 
 function db_get_one_random_partial_value($class)
 {
-    //global $db;
-    //$query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND() LIMIT 1;");
-    //$query->execute(["class" => $class]);
-    //$result = $query->fetch();
-    //return $result["value"];
     return db_cache_get($class);
 }
 
 function db_get_random_partial_values($class, $limitn = "all")
 {
-    // global $db;
-    // $query = "";
-    // if ($limitn == null) {
-    //   $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND();");
-    // } else {
-    //   $query = $db->prepare("SELECT value FROM sentence_partials WHERE class = :class ORDER BY RAND() LIMIT $limitn;");
-    // }
-    // $query->execute(["class" => $class]);
-    // $result = $query->fetchAll();
-    // return array_map(function ($e) {
-    //   return $e["value"];
-    // }, $result);
     $return_data = db_cache_get($class, $limitn);
     if (gettype($return_data) == "array") {
         return $return_data;
