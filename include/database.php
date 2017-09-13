@@ -34,6 +34,7 @@ function db_cache_request($class)
 function db_cache_get($class, $lines = 1, $order = "random", $unique = false)
 {
     static $db_cache = array();
+    // Fetch the whole pack of data if not already fetched
     if (!array_key_exists($class, $db_cache)) {
         $db_cache[$class] = db_cache_request($class); // fetch data if no already done
     }
@@ -52,18 +53,23 @@ function db_cache_get($class, $lines = 1, $order = "random", $unique = false)
     if ($lines < 1) {
         throw new Exception("You must request more than $lines lines.");
     }
-
     if ($order != "random") { // only allow random for now
         throw new Exception("You cannot request the order $order, only \"random\" is valid.");
     }
 
+    // If one line is requested, send it
     if ($lines == 1) {
         return $class_data[rand(0, count($class_data) - 1)];
-    } else {
+    }
+    // If more than one line is requested, ...
+    else {
+        // If we can't keep duplicate of data, shuffle the whole pack and read a sequence
         if ($unique == true) {
             shuffle($class_data);
             return array_slice($class_data, 0, $lines - 1);
-        } else {
+        }
+        // If we want duplicated data, iterate on the pack of data N times
+        else {
             $return_data = array();
             for ($i = 0; $i < $lines; $i++) {
                 $random_value = $class_data[rand(0, count($class_data)-1)];
