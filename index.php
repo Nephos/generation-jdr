@@ -1,4 +1,5 @@
 <?php
+include_once('include/lib.php');
 include_once('include/database.php');
 include_once('include/header.php');
 

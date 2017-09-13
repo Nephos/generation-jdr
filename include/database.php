@@ -98,5 +98,10 @@ function db_get_random_partial_values($class, $limitn = "all")
     // return array_map(function ($e) {
     //   return $e["value"];
     // }, $result);
-    return db_cache_get($class, $limitn);
+    $return_data = db_cache_get($class, $limitn);
+    if (gettype($return_data) == "array") {
+        return $return_data;
+    } else {
+        return [$return_data];
+    }
 }

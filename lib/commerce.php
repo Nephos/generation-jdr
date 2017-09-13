@@ -78,24 +78,23 @@ function creercommerce($type, $particu, $typevillenum, $taille)
         if (rand(1, 100) > 50) {
             $nom = creerauberge();
             $sortie = 'Une auberge portant le nom : ' . $nom . '<a href="index.php?page=aubergedetail&nom=' . urlencode($nom) . '" target="_blank"><i> Détail</i></a>';
-            ;
             compteur('auberge');
         } else {
-            $sortie = $commerce . ' tenu par ' . creernomevo($race[rand(0, 6)], rand(1, 2));
+            $sortie = $commerce . ' tenu par ' . creernomevo(array_rand_value($race), rand(1, 2));
         }
         break;
         case 2:
-        $sortie = $expert . ' du nom de ' . creernomevo($race[rand(0, 6)], rand(1, 2));
+        $sortie = $expert . ' du nom de ' . creernomevo(array_rand_value($race), rand(1, 2));
         break;
         case 3:
-        $sortie = $adepte . ' du nom de ' . creernomevo($race[rand(0, 6)], rand(1, 2));
+        $sortie = $adepte . ' du nom de ' . creernomevo(array_rand_value($race), rand(1, 2));
         break;
         case 4:
         $sexe = rand(1, 2);
         if ($sexe == 1) {
-            $sortie = creernomevo($race[rand(0, 5)], $sexe) . ' ' . $noblessemas[rand(0, count($noblessemas)-1)] . ' de ' .creerlieudit(1);
+            $sortie = creernomevo(array_rand_value($race), $sexe) . ' ' . $noblessemas[rand(0, count($noblessemas)-1)] . ' de ' .creerlieudit(1);
         } else {
-            $sortie = creernomevo($race[rand(0, 5)], $sexe) . ' ' . $noblessefem[rand(0, count($noblessefem)-1)] . ' de ' .creerlieudit(1);
+            $sortie = creernomevo(array_rand_value($race), $sexe) . ' ' . $noblessefem[rand(0, count($noblessefem)-1)] . ' de ' .creerlieudit(1);
         }
         break;
     }
