@@ -36,10 +36,6 @@ function creercommerce($type, $particu, $typevillenum, $taille)
     $expert = db_get_one_random_partial_value("expert");
     $commerce = db_get_one_random_partial_value("commerce");
     $commercemarin = db_get_one_random_partial_value("commercemarin");
-    $titrenoblessefemfull = db_get_one_random_partial_value("titrenoblessefemfull");
-    $titrenoblessemasfull = db_get_one_random_partial_value("titrenoblessemasfull");
-    $noblessemas = db_get_one_random_partial_value("noblessemas");
-    $noblessefem = db_get_one_random_partial_value("noblessefem");
 
     switch ($typevillenum) {
         case 0:
@@ -71,6 +67,8 @@ function creercommerce($type, $particu, $typevillenum, $taille)
         $noblessemas = $titrenoblessemasfaible;
         $noblessefem = $titrenoblessefemfaible;
     } else {
+        $titrenoblessefemfull = db_get_one_random_partial_value("titrenoblessefemfull");
+        $titrenoblessemasfull = db_get_one_random_partial_value("titrenoblessemasfull");
         $noblessemas = $titrenoblessemasfull;
         $noblessefem = $titrenoblessefemfull;
     }
